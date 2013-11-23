@@ -1,0 +1,8 @@
+F:\ITU\Algorithms Design 2\TriangleProblem\TriangleProblem\bin\Debug\TriangleProblem.exe.config
+F:\ITU\TriangleProblem\TriangleProblem\bin\Debug\TriangleProblem.exe.config
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\TriangleProblem.exe.config
+F:\ITU\TriangleProblem\src\TriangleProblem\obj\Debug\TriangleProblem.csprojResolveAssemblyReference.cache
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\TriangleProblem.exe
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\TriangleProblem.pdb
+F:\ITU\TriangleProblem\src\TriangleProblem\obj\Debug\TriangleProblem.exe
+F:\ITU\TriangleProblem\src\TriangleProblem\obj\Debug\TriangleProblem.pdb
