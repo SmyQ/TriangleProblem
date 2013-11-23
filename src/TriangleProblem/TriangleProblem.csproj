@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entieties\Actor.cs" />
+    <Compile Include="Entieties\Edge.cs" />
     <Compile Include="Entieties\Graph.cs" />
     <Compile Include="Entieties\Movie.cs" />
     <Compile Include="Entieties\Result.cs" />
