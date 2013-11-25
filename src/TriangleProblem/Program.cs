@@ -8,18 +8,19 @@ namespace TriangleProblem
 {
     public class Program
     {
-        const String FILE_PATH = "HbB_FASTAs.in.txt";
+        const String FILE_PATH = "../../../../imdb/imdb-small.txt";
 
         static void Main(string[] args)
         {
             FileParser fileParser = new FileParser(FILE_PATH);
-            GraphManager manager = new GraphManager(fileParser.Parse());
-            Result result = manager.FindTreeActorrsThatPlayedInMostMovies();
+            Graph graph = fileParser.Parse();
+            GraphManager manager = new GraphManager(graph);
+            //Result result = manager.FindTreeActorrsThatPlayedInMostMovies();
 
-            foreach (Actor actor in result.Actors)
-            {
-                Console.WriteLine(actor.LastName);
-            }
+            //foreach (Actor actor in result.Actors)
+            //{
+            //    Console.WriteLine(actor.LastName);
+            //}
 
             Console.ReadLine();
         }

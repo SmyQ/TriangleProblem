@@ -17,7 +17,7 @@ namespace TriangleProblem.Entieties
         private List<Movie> _movies;
         private List<Edge> _edges; 
 
-        public int ID { get; set; }
+        public int Id { get; set; }
         public String FirstName { get; set; }
         public String LastName { get; set; }
         public Gender Gender { get; set; }

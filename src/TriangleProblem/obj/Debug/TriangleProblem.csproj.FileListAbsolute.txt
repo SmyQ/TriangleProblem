@@ -5,8 +5,7 @@ F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\TriangleProblem.exe
 F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\TriangleProblem.pdb
 F:\ITU\TriangleProblem\src\TriangleProblem\obj\Debug\TriangleProblem.exe
 F:\ITU\TriangleProblem\src\TriangleProblem\obj\Debug\TriangleProblem.pdb
-F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\TriangleProblem.exe.CodeAnalysisLog.xml
-F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\TriangleProblem.exe.lastcodeanalysissucceeded
 D:\GitHub\TriangleProblem\src\TriangleProblem\bin\Debug\TriangleProblem.exe.config
 D:\GitHub\TriangleProblem\src\TriangleProblem\obj\Debug\TriangleProblem.exe
 D:\GitHub\TriangleProblem\src\TriangleProblem\obj\Debug\TriangleProblem.pdb
+F:\ITU\TriangleProblem\src\TriangleProblem\obj\Debug\TriangleProblem.csprojResolveAssemblyReference.cache

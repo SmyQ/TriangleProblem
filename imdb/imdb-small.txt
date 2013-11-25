@@ -1,0 +1,33 @@
+LOCK TABLES `actors` WRITE;
+ 519105,'!Nqate','Xqamxebe','M',2
+ 524655,'1st Lt. Donald W.','Zautcke','M',1
+ 475182,'2','Toff','M',1
+ 370794,'42nd Street','Pete','M',1
+ 389977,'75th','Ranger Regiment','M',1
+ 213427,'99','Hooker','M',1
+ 380131,'99','Posse','M',1
+ 302008,'A','Martinez','M',56
+ 171966,'A Phai','Giang','M',1
+ 291,'A.','Abakirov','M',1
+ 556,'A.','Abdel Hadi','M',2
+ 726,'A.','Abduvakhabov','M',1
+ 529302,'A.','Ablova','F',1
+ 1092,'A.','Abovyan','M',1
+ 1185,'A.','Abrahamyan','M',1
+ 1209,'A.','Abramishvili','M',2
+ 529837,'A.','Adalyan','F',1
+ LOCK TABLES `movies` WRITE;
+ 58,'\'Arriet\'s Baby',1913,NULL,111
+ 0,'#28',2002,NULL,94
+ 1,'#7 Train: An Immigrant Journey, The',2000,NULL,71
+ 2,'$',1971,6.4,136
+ 3,'$1,000 Reward',1913,NULL,141
+ 4,'$1,000 Reward',1915,NULL,88
+ 5,'$1,000 Reward',1923,NULL,61
+ 6,'$1,000,000 Duck',1971,5,106
+ 7,'$1,000,000 Reward, The',1920,NULL,111
+ 8,'$10,000 Under a Pillow',1921,NULL,78
+ 9,'$100,000',1915,NULL,170
+ 10,'$100,000 Pyramid, The',2001,NULL,153
+ 11,'$1000 a Touchdown',1939,6.7,153
+ 12,'$20,000 Carat, The',1913,NULL,148

@@ -1,25 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TriangleProblem.Entieties
 {
     public class Graph
     {
-        private List<Actor> _actors = new List<Actor>(); 
+        private Dictionary<int, Actor> _actors = new Dictionary<int, Actor>();
+        private Dictionary<int, Movie> _movies = new Dictionary<int, Movie>();
 
-        public List<Actor> Actors
+        public Dictionary<int, Actor> Actors
         {
-            get
-            {
-                return _actors ?? (_actors = new List<Actor>());
-            }
-            set
-            {
-                _actors = value;
-            }
+            get { return _actors ?? (_actors = new Dictionary<int, Actor>()); }
+            set { _actors = value; }
+        }
+        public Dictionary<int, Movie> Movies
+        {
+            get { return _movies ?? (_movies = new Dictionary<int, Movie>()); }
+            set { _movies = value; }
         }
  
     }
