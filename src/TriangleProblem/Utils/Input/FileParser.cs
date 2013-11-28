@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using TriangleProblem.Entieties;
+using TriangleProblem.Extensions;
 
 namespace TriangleProblem.Utils.Input
 {
@@ -26,10 +29,11 @@ namespace TriangleProblem.Utils.Input
             String[] deli = {","};
             String[] deliMovieTitle = { ",'", "'," };
             Graph graph = new Graph();
+            Roles roles = new Roles();
 
             using (FileInput input = new FileInput(FilePath))
             {
-                String line;
+                String line, role = "";
                 ParserState = ParserState.Ignore;
 
                 while ((line = input.ReadLine()) != null)
@@ -46,7 +50,7 @@ namespace TriangleProblem.Utils.Input
                                 ParserState = ParserState.Movies;
                                 break;
                             case "LOCK TABLES `roles` WRITE;":
-                                ParserState = ParserState.Movies;
+                                ParserState = ParserState.Roles;
                                 break;
                             default:
                                 ParserState = ParserState.Ignore;
@@ -102,14 +106,43 @@ namespace TriangleProblem.Utils.Input
                                 //196827,406673,'Professor Kollheim'
                                 //196828,270138,'Brett Coldyron'
 
-                                //var array = line.Split(deli, StringSplitOptions.RemoveEmptyEntries);
-                                //Edge edge = new Edge()
-                                //    {
+                                var array = line.Split(deli, StringSplitOptions.RemoveEmptyEntries);
+                                int actorId = int.Parse(array[0]);
+                                int movieId = int.Parse(array[1]);
 
-                                //    };
+                                roles.GetActors(graph.Movies[movieId]).Add(graph.Actors[actorId]);
                                 break;
                             } 
                         }
+                    }
+                }
+            }
+
+            IEnumerable<Movie> movies = roles.roles.Keys.OrderBy(m => m.Id);
+            foreach (Movie movie in movies)
+            {
+                List<Actor> actorsInvolved = roles.GetActors(movie);
+                while (actorsInvolved.Count() > 1)
+                {
+                    Actor actor1 = actorsInvolved[0];
+                    actorsInvolved.Remove(actor1);
+
+                    foreach (Actor actor2 in actorsInvolved)
+                    {
+                        Edge edge = null;
+                        if (actor1.Id > actor2.Id) actor1.Swap(actor2);
+                        if (actor1.Edges.Exists(e => e.StartNode == actor1 && e.EndNode == actor2))
+                        {
+                            edge = actor1.Edges.FirstOrDefault(e => e.StartNode == actor1 && e.EndNode == actor2);
+                            
+                        }
+                        else
+                        {
+                            edge = new Edge() {StartNode = actor1, EndNode = actor2};
+                            actor1.Edges.Add(edge);
+                            actor2.Edges.Add(edge);
+                        }
+                        edge.CommonMovies.Add(movie);
                     }
                 }
             }
