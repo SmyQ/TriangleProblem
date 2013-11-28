@@ -15,12 +15,12 @@ namespace TriangleProblem
             FileParser fileParser = new FileParser(FILE_PATH);
             Graph graph = fileParser.Parse();
             GraphManager manager = new GraphManager(graph);
-            //Result result = manager.FindTreeActorrsThatPlayedInMostMovies();
+            Result result = manager.FindTreeActorsThatPlayedInMostMovies();
 
-            //foreach (Actor actor in result.Actors)
-            //{
-            //    Console.WriteLine(actor.LastName);
-            //}
+            foreach (Actor actor in result.Actors)
+            {
+                Console.WriteLine(actor.LastName);
+            }
 
             Console.ReadLine();
         }
