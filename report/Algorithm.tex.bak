@@ -1,2 +1,32 @@
 \label{Algorithm}
 \section{Algorithm}
+
+The following section covers how the algorithm works.
+Let us start by defining some notations.
+\subsection{Notations}
+Let G = (V,E) be an weighted, undirected simple graph and let n = |V| and m = |E|.
+
+A vertex v denotes an actor. Any edge e  between vertices v1 and v2 denotes a set of movies these two actors have played in together. Weight of the edge, W(e) denotes the size of that set.
+
+Denote by A(v) the set of adjacent edges to vertex v.
+
+YYY(e) is the set of (two) vertices adjacent to an edge e.
+
+SET(v1,v2...vn) - returns a set of unique elements.
+
+MovieCount denotes the biggest number found so far of common movies between any given three actors.
+\subsection{Pseudocode}
+
+\begin{algorithmic}
+\State $MovieCount\gets 0$
+\State $Actor1\gets null$
+\State $Actor2\gets null$
+\State $Actor3\gets null$
+
+\For{v V}
+\State $i\gets 0$ 
+
+\EndFor
+
+\end{algorithmic}
+
