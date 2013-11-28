@@ -2,6 +2,7 @@
 
 \usepackage{algpseudocode}
 \usepackage{mathtools}
+\usepackage{graphicx}
 
 \usepackage[utf8x]{inputenc} % set input encoding (not needed with XeLaTeX)
 

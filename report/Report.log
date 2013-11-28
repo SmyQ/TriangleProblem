@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.4.28)  26 NOV 2013 17:31
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.4.28)  28 NOV 2013 14:28
 entering extended mode
 **report.tex
 (D:\GitHub\TriangleProblem\report\report.tex
@@ -146,6 +146,34 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen119
 \l_MT_below_shortintertext_sep=\dimen120
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count110
+))
+\Gin@req@height=\dimen121
+\Gin@req@width=\dimen122
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks20
@@ -160,7 +188,7 @@ Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 (C:\Users\plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
-\uc@secondtry=\count110
+\uc@secondtry=\count111
 \uc@combtoks=\toks22
 \uc@combtoksb=\toks23
 \uc@temptokena=\toks24
@@ -170,7 +198,7 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
@@ -179,40 +207,20 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count111
-\Gm@cntv=\count112
-\c@Gm@tempcnt=\count113
-\Gm@bindingoffset=\dimen121
-\Gm@wd@mp=\dimen122
-\Gm@odd@mp=\dimen123
-\Gm@even@mp=\dimen124
-\Gm@layoutwidth=\dimen125
-\Gm@layoutheight=\dimen126
-\Gm@layouthoffset=\dimen127
-\Gm@layoutvoffset=\dimen128
+\Gm@cnth=\count112
+\Gm@cntv=\count113
+\c@Gm@tempcnt=\count114
+\Gm@bindingoffset=\dimen123
+\Gm@wd@mp=\dimen124
+\Gm@odd@mp=\dimen125
+\Gm@even@mp=\dimen126
+\Gm@layoutwidth=\dimen127
+\Gm@layoutheight=\dimen128
+\Gm@layouthoffset=\dimen129
+\Gm@layoutvoffset=\dimen130
 \Gm@dimlist=\toks25
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
-)
-Package graphics Info: Driver file: dvips.def on input line 91.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvips.def"
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
-))
-\Gin@req@height=\dimen129
-\Gin@req@width=\dimen130
-)
 (C:\Users\plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen131
@@ -225,12 +233,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen138
 \cmidrulekern=\dimen139
 \defaultaddspace=\dimen140
-\@cmidla=\count114
-\@cmidlb=\count115
+\@cmidla=\count115
+\@cmidlb=\count116
 \@aboverulesep=\dimen141
 \@belowrulesep=\dimen142
-\@thisruleclass=\count116
-\@lastruleclass=\count117
+\@thisruleclass=\count117
+\@lastruleclass=\count118
 \@thisrulewidth=\dimen143
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
@@ -272,19 +280,19 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@parindent=\dimen151
 \caption@hangindent=\dimen152
 )
-\c@ContinuedFloat=\count118
+\c@ContinuedFloat=\count119
 )
-\c@KVtest=\count119
+\c@KVtest=\count120
 \sf@farskip=\skip59
 \sf@captopadj=\dimen153
 \sf@capskip=\skip60
 \sf@nearskip=\skip61
-\c@subfigure=\count120
-\c@subfigure@save=\count121
-\c@lofdepth=\count122
-\c@subtable=\count123
-\c@subtable@save=\count124
-\c@lotdepth=\count125
+\c@subfigure=\count121
+\c@subfigure@save=\count122
+\c@lofdepth=\count123
+\c@subtable=\count124
+\c@subtable@save=\count125
+\c@lotdepth=\count126
 \sf@top=\skip62
 \sf@bottom=\skip63
 )
@@ -352,26 +360,39 @@ Package tocloft Info: The document has section divisions on input line 44.
 \cftsubtabnumwidth=\skip109
 )
 (D:\GitHub\TriangleProblem\report\report.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
 
-(C:\Users\plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\ucsencs.def
+(C:\Users\plamen\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count127
+\scratchdimen=\dimen154
+\scratchbox=\box28
+\nofMPsegments=\count128
+\nofMParguments=\count129
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count130
+\MPscratchDim=\dimen155
+\MPnumerator=\count131
+\makeMPintoPDFobject=\count132
+\everyMPtoPDFconversion=\toks31
+) (C:\Users\plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 *geometry* driver: auto-detecting
-*geometry* detected driver: dvips
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: dvips
+* driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -406,21 +427,76 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 (D:\GitHub\TriangleProblem\report\Introduction.tex)
-(D:\GitHub\TriangleProblem\report\ProblemDescription.tex)
+(D:\GitHub\TriangleProblem\report\ProblemDescription.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--13
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 13.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
+
+<project_problem_illustration.png, id=1, 1126.2075pt x 766.7847pt>
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   !
+l.25 ...dth=0.8]{project_problem_illustration.png}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   !
+l.25 ...dth=0.8]{project_problem_illustration.png}
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+File: project_problem_illustration.png Graphic file (type png)
+<use project_problem_illustration.png>
+Package pdftex.def Info: project_problem_illustration.png used on input line 25
+.
+(pdftex.def)             Requested size: 0.8pt x 0.53821pt.
+)
 (D:\GitHub\TriangleProblem\report\Algorithm.tex [1
 
-])
-(D:\GitHub\TriangleProblem\report\Analysis.tex)
+{C:/Users/plamen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/GitHub/
+TriangleProblem/report/project_problem_illustration.png>]) (D:\GitHub\TriangleP
+roblem\report\Analysis.tex)
 (D:\GitHub\TriangleProblem\report\Conclusion.tex)
 (D:\GitHub\TriangleProblem\report\References.tex) [2]
 (D:\GitHub\TriangleProblem\report\report.aux) ) 
 Here is how much of TeX's memory you used:
- 4967 strings out of 493922
- 76074 string characters out of 3147302
- 156798 words of memory out of 3000000
- 8187 multiletter control sequences out of 15000+200000
+ 5575 strings out of 493921
+ 84737 string characters out of 3147279
+ 164342 words of memory out of 3000000
+ 8777 multiletter control sequences out of 15000+200000
  11432 words of font info for 41 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,10n,43p,306b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,10n,43p,497b,264s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report.pdf (2 pages, 428072 bytes).
+PDF statistics:
+ 44 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on report.dvi (2 pages, 2412 bytes).
