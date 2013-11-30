@@ -6,27 +6,4 @@ The \textbf{goal} is to find the three actors, whose movie count they have playe
 \textbf{Input} is a list of actors, movies and actor-movie pair, for each actor that has played in a movie.
 
 \textbf{Output} is a list of actors with the desired property, on an empty list if no three actors have played together in the same movie.
-\\
-\\
-The algorithm we are presenting works on two main steps:
-\begin{itemize}
-  \item Build the data structure - the efficiency of the algorithm is determined by the data structure it runs on. On the other hand, the data structure is specifically designed to solve this problem. Try to solve another problem, say maximizing the number of movies 4 actors have played together in. The same data structure can be used for this problem, but a different algorithm altogether.
-  \item Traverse data structure and output result - the algorithm works by  discarding part of the information on every iteration, thereby reducing the size of the problem.
-\end{itemize} 
 
-More details on the algorithm inner workings in the next section.
-
-
-
-
-ALGORITHM SECTION
-As mentioned in the previous section, the algorithm works starts by frist building the data structure. The data structure is a graph, where vertices represent actors and edges between them the movie(s) these actors played together in. Figure XXX represents the data structure.\vspace*{3\baselineskip}
-To clearly illustrate the problem, the picture above represents a multi-graph, i.e. there can be multiple edges between two vertices. This is not the case of the actual data structure, however, as multiple edges are collapsed into a single one, where the weight is the sum of the weights of the original edges. The weight of an edge is the initially 1 - a single movie common to two actors (vertices). 
-
-After the structure is constructed, the actual data processing takes place.
-
-Iterate over all actors
-If there are more than 2 edges, get the edge with minimal weight - the one having a collection of least movies. As we are ultimately looking for a common set of two subset (the movies from two edges), we can use the one with the least movies.
-Having the minimal weight edge, try finding the common set with the rest of the edges. After all the edges are traversed, get the common set of maximum size, this will be the set which the three vertices have in common. At the end, remove any references to these edges from these three vertices. This will make future iterations faster, as less edges need to be examined.
-
-Advance in the vertices list and repeat the above operation again with the new vertex.
