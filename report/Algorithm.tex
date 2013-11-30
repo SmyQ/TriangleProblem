@@ -2,7 +2,12 @@
 \section{Algorithm}
 
 The following section covers how the algorithm works.
-Let us start by defining some notations.
+\\
+The algorithm we are presenting works on two main steps:
+\begin{itemize}
+  \item Build the data structure - the efficiency of the algorithm is determined by the data structure it runs on. On the other hand, the data structure is specifically designed to solve this problem.
+  \item Traverse data structure and output result - the algorithm works by  discarding part of the information on every iteration, thereby reducing the size of the problem.
+\end{itemize} 
 
 \subsection{Notations}
 Let G = (V,E) be an weighted, undirected simple graph and let n = \(\lvert V\rvert\) and m = \(\lvert E\rvert\).
@@ -11,30 +16,64 @@ A vertex v denotes an actor. Any edge e between vertices \(v_1\) and \(v_2\) den
 
 Denote by A(v) the set of adjacent edges to vertex v.
 
-\(\Pi\)(e) is the set of (two) vertices adjacent to an edge e.
+SET(e) is the set of (two) vertices adjacent to an edge e.
 
-SET(\(v_1, v_2,... v_n)\) - returns a set of unique elements.
+Unique(\(v_1, v_2,... v_n)\) - returns a set of unique elements.
+
+Remove(v) - removes edges adjacent to v from the graph G.
 
 MovieCount denotes the biggest number found so far of common movies between any given three actors.
+
+\subsection{Data structure}
+As mentioned in the previous section, the algorithm works starts by frist building the data structure. The data structure is a graph, where vertices represent actors and edges between them the movie(s) these actors played together in. Figure XXX represents the data structure.\vspace*{3\baselineskip}
+To clearly illustrate the problem, the picture above represents a multi-graph, i.e. there can be multiple edges between two vertices. This is not the case of the actual data structure, however, as multiple edges are collapsed into a single one, where the weight is the sum of the weights of the original edges. The weight of an edge is the initially 1 - a single movie common to two actors (vertices).
+
 \subsection{Pseudocode}
 
+After the structure is constructed, the actual data processing takes place.
 
+Iterate over all actors
+If there are more than 2 edges, get the edge with minimal weight - the one having a collection of least movies. As we are ultimately looking for a common set of two subset (the movies from two edges), we can use the one with the least movies.
+Having the minimal weight edge, try finding the common set with the rest of the edges. After all the edges are traversed, get the common set of maximum size, this will be the set which the three vertices have in common. At the end, remove any references to these edges from these three vertices. This will make future iterations faster, as less edges need to be examined.
+
+Advance in the vertices list and repeat the above operation again with the new vertex.
 
 \begin{verbatim}
+Algorithm 1: FindThreePlayers()
 1	moviesCount ← 0;
-2	{a_1,a_2,a_3\)};
-3	    FOR v ∈ V DO
-4	        FOR i ← 0 to size of A(v) DO
-5		    FOR j ← i + 1 to size of A(v) DO
-6	                e1←A(v)[i];
-7	                e2←A(v)[j];
-8	                IF(MoviesCount < MIN(W(e1), W(e2))) THEN
-9	                count ← CommonMovieSubsetCount(e1, e2);
-10	                IF(moviesCount < count) THEN
-11	                movieCount ← count;
-12	              
-13	                
-	            
-	            
+2	{a1,a2,a3};
+3	FOR v ∈ V DO
+4	  FOR i ← 0 to size of A(v) DO
+5	      FOR j ← i + 1 to size of A(v) DO
+6	          e1←A(v)[i];
+7	          e2←A(v)[j];
+8	          IF MoviesCount < MIN(W(e1), W(e2)) THEN
+9	              count ← CommonMovieSubsetCount(e1, e2);
+10	             IF moviesCount < count THEN
+11	                  movieCount ← count;
+12	                  {a1,a2,a3} ← Unique(SET(e1), SET(e2));
+13	             END IF
+14	          END IF
+15	      END FOR
+16	  END FOR
+17	Remove A(v);
+18	END FOR	  	                    	  
 \end{verbatim}
 
+\begin{verbatim}
+Algorithm 2: CommonMovieSubsetCount(e1, e2)
+1	count ← 0;
+2	p1 ← 0;
+3	p2← 0;
+4	WHILE p1 < W(e1) AND p2 < W(e2)
+5	  IF e1[p1] = e2[p2] THEN
+6	    INCREMENT(count);
+7	    INCREMENT(p1);
+8	    INCREMENT(p2);
+9	  ELSE IF e1[p1] < e2[p2]
+10	   INCREMENT(p1);
+11	 ELSE IF e1[p1] > e2[p2]
+12	  INCREMENT(p2);
+13	END IF
+14	RETURN count;
+\end{verbatim}
