@@ -3,3 +3,7 @@ src/TriangleProblem/bin
 src/TriangleProblem/obj
 src/TriangleProblem_Naive/bin
 src/TriangleProblem_Naive/obj
+src/Utils/bin
+src/Utils/obj
+src/Entities/bin
+src/Entities/obj
