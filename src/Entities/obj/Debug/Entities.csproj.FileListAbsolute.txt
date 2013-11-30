@@ -1,0 +1,4 @@
+C:\GitHub\TriangleProblem\src\Entities\bin\Debug\Entities.dll
+C:\GitHub\TriangleProblem\src\Entities\bin\Debug\Entities.pdb
+C:\GitHub\TriangleProblem\src\Entities\obj\Debug\Entities.dll
+C:\GitHub\TriangleProblem\src\Entities\obj\Debug\Entities.pdb

@@ -1,15 +1,15 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using TriangleProblem.Entieties;
 
 namespace TriangleProblem.Utils.Computation
 {
     public class GraphManager
     {
-        private Entieties.Graph Graph { get; set; }
+        private Graph Graph { get; set; }
 
-        public GraphManager(Entieties.Graph graph)
+        public GraphManager(Graph graph)
         {
             Graph = graph;
         }

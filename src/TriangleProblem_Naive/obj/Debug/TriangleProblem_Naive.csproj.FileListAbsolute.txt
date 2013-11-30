@@ -1,0 +1,5 @@
+C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\TriangleProblem_Naive.exe.config
+C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\TriangleProblem_Naive.exe
+C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\TriangleProblem_Naive.pdb
+C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\obj\Debug\TriangleProblem_Naive.exe
+C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\obj\Debug\TriangleProblem_Naive.pdb

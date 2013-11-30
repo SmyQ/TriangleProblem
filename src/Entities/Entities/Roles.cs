@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TriangleProblem.Entieties
+namespace Entities
 {
     public class Roles
     {

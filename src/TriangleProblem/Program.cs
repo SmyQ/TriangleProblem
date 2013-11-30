@@ -1,5 +1,5 @@
-﻿using System;
-using TriangleProblem.Entieties;
+﻿using Entities;
+using System;
 using TriangleProblem.Utils;
 using TriangleProblem.Utils.Computation;
 using TriangleProblem.Utils.Input;

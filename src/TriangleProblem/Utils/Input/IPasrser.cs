@@ -1,4 +1,4 @@
-﻿using TriangleProblem.Entieties;
+﻿using Entities;
 
 namespace TriangleProblem.Utils.Input
 {

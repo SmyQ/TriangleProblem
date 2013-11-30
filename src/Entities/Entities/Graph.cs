@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TriangleProblem.Entieties
+namespace Entities
 {
     public class Graph
     {
