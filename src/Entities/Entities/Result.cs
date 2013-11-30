@@ -21,5 +21,7 @@ namespace Entities
                 _actors = value;
             }
         }
+
+        public int MovieCount { get; set; }
     }
 }
