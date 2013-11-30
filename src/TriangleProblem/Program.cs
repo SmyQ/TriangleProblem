@@ -1,5 +1,6 @@
 ﻿using Entities;
 using System;
+using System.Diagnostics;
 using TriangleProblem.Utils;
 using TriangleProblem.Utils.Computation;
 using Utils.Input;
@@ -15,12 +16,18 @@ namespace TriangleProblem
             FileParser fileParser = new FileParser(FILE_PATH);
             Graph graph = fileParser.Parse();
             GraphManager manager = new GraphManager(graph);
+
+            Stopwatch stopwatch = new Stopwatch();
+
+            stopwatch.Start();
             Result result = manager.FindTreeActorsThatPlayedInMostMovies();
+            stopwatch.Stop();
 
             foreach (Actor actor in result.Actors)
             {
                 Console.WriteLine(actor.LastName);
             }
+            Console.WriteLine("Time elapsed: " + stopwatch.ElapsedMilliseconds);
 
             Console.ReadLine();
         }
