@@ -110,7 +110,11 @@ namespace Utils.Input
                                     int actorId = int.Parse(array[0]);
                                     int movieId = int.Parse(array[1]);
 
-                                    roles.GetActors(graph.Movies[movieId]).Add(graph.Actors[actorId]);
+                                    var movie = graph.Movies[movieId];
+                                    var actor = graph.Actors[actorId];
+
+                                    actor.Movies.Add(movie);
+                                    roles.GetActors(movie).Add(actor);
                                     break;
                                 }
                         }

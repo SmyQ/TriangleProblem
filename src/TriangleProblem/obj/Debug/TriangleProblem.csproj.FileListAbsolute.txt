@@ -9,3 +9,7 @@ D:\GitHub\TriangleProblem\src\TriangleProblem\bin\Debug\TriangleProblem.exe.conf
 D:\GitHub\TriangleProblem\src\TriangleProblem\obj\Debug\TriangleProblem.exe
 D:\GitHub\TriangleProblem\src\TriangleProblem\obj\Debug\TriangleProblem.pdb
 F:\ITU\TriangleProblem\src\TriangleProblem\obj\Debug\TriangleProblem.csprojResolveAssemblyReference.cache
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\Entities.dll
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\Utils.dll
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\Entities.pdb
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\Utils.pdb

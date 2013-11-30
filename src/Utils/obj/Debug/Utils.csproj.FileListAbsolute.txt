@@ -5,3 +5,10 @@ C:\GitHub\TriangleProblem\src\Utils\bin\Debug\Entities.pdb
 C:\GitHub\TriangleProblem\src\Utils\obj\Debug\Utils.csprojResolveAssemblyReference.cache
 C:\GitHub\TriangleProblem\src\Utils\obj\Debug\Utils.dll
 C:\GitHub\TriangleProblem\src\Utils\obj\Debug\Utils.pdb
+F:\ITU\TriangleProblem\src\Utils\bin\Debug\Utils.dll
+F:\ITU\TriangleProblem\src\Utils\bin\Debug\Utils.pdb
+F:\ITU\TriangleProblem\src\Utils\bin\Debug\Entities.dll
+F:\ITU\TriangleProblem\src\Utils\bin\Debug\Entities.pdb
+F:\ITU\TriangleProblem\src\Utils\obj\Debug\Utils.csprojResolveAssemblyReference.cache
+F:\ITU\TriangleProblem\src\Utils\obj\Debug\Utils.dll
+F:\ITU\TriangleProblem\src\Utils\obj\Debug\Utils.pdb
