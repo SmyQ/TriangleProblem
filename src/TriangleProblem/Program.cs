@@ -2,7 +2,7 @@
 using System;
 using TriangleProblem.Utils;
 using TriangleProblem.Utils.Computation;
-using TriangleProblem.Utils.Input;
+using Utils.Input;
 
 namespace TriangleProblem
 {
@@ -24,6 +24,5 @@ namespace TriangleProblem
 
             Console.ReadLine();
         }
-
     }
 }

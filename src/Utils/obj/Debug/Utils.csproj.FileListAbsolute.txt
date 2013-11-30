@@ -1,0 +1,7 @@
+C:\GitHub\TriangleProblem\src\Utils\bin\Debug\Utils.dll
+C:\GitHub\TriangleProblem\src\Utils\bin\Debug\Utils.pdb
+C:\GitHub\TriangleProblem\src\Utils\bin\Debug\Entities.dll
+C:\GitHub\TriangleProblem\src\Utils\bin\Debug\Entities.pdb
+C:\GitHub\TriangleProblem\src\Utils\obj\Debug\Utils.csprojResolveAssemblyReference.cache
+C:\GitHub\TriangleProblem\src\Utils\obj\Debug\Utils.dll
+C:\GitHub\TriangleProblem\src\Utils\obj\Debug\Utils.pdb

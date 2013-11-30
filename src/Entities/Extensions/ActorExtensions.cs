@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TriangleProblem.Extensions
+namespace Entities.Extensions
 {
     public static class ActorExtensions
     {

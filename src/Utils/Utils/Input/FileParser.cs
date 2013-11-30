@@ -1,10 +1,10 @@
 ﻿using Entities;
+using Entities.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using TriangleProblem.Extensions;
 
-namespace TriangleProblem.Utils.Input
+namespace Utils.Input
 {
     public enum ParserState
     {
@@ -26,7 +26,7 @@ namespace TriangleProblem.Utils.Input
 
         public Graph Parse()
         {
-            String[] deli = {","};
+            String[] deli = { "," };
             String[] deliMovieTitle = { ",'", "'," };
             Graph graph = new Graph();
             Roles roles = new Roles();
@@ -62,57 +62,57 @@ namespace TriangleProblem.Utils.Input
                         switch (ParserState)
                         {
                             case ParserState.Actors:
-                            {
-                                // LOCK TABLES `actors` WRITE;
-                                // 519105,'!Nqate','Xqamxebe','M',2
-
-                                var array = line.Split(deli, StringSplitOptions.RemoveEmptyEntries);
-                                int actorId = int.Parse(array[0]);
-                                graph.Actors.Add(actorId, new Actor()
                                 {
-                                    Id = actorId,
-                                    FirstName = array[1],
-                                    LastName = array[2],
-                                    Gender = (array[3] == "'M'") ? Gender.Male : Gender.Female,
-                                    NumberOfFlims = int.Parse(array[4])
-                                });
-                                break;
-                            }  
+                                    // LOCK TABLES `actors` WRITE;
+                                    // 519105,'!Nqate','Xqamxebe','M',2
+
+                                    var array = line.Split(deli, StringSplitOptions.RemoveEmptyEntries);
+                                    int actorId = int.Parse(array[0]);
+                                    graph.Actors.Add(actorId, new Actor()
+                                    {
+                                        Id = actorId,
+                                        FirstName = array[1],
+                                        LastName = array[2],
+                                        Gender = (array[3] == "'M'") ? Gender.Male : Gender.Female,
+                                        NumberOfFlims = int.Parse(array[4])
+                                    });
+                                    break;
+                                }
                             case ParserState.Movies:
-                            {
-                                // LOCK TABLES `movies` WRITE;
-                                //306131,'Snitch',1996,4.6,116
-
-                                
-                                var movieTitle = line.Split(deliMovieTitle, StringSplitOptions.RemoveEmptyEntries);
-                                int movieId = int.Parse(movieTitle[0]);
-                                var array = movieTitle[2].Split(deli, StringSplitOptions.RemoveEmptyEntries);
-                                graph.Movies.Add(movieId, new Movie()
                                 {
-                                    Id = movieId,
-                                    Title = movieTitle[1],
-                                    Year = new DateTime(int.Parse(array[0]),1,1),
-                                    Rank = ((array[1]) == "NULL") ? 0 : double.Parse(array[1]),
-                                    Duration = int.Parse(array[2])
-                                });
-                                break;
-                            } 
+                                    // LOCK TABLES `movies` WRITE;
+                                    //306131,'Snitch',1996,4.6,116
+
+
+                                    var movieTitle = line.Split(deliMovieTitle, StringSplitOptions.RemoveEmptyEntries);
+                                    int movieId = int.Parse(movieTitle[0]);
+                                    var array = movieTitle[2].Split(deli, StringSplitOptions.RemoveEmptyEntries);
+                                    graph.Movies.Add(movieId, new Movie()
+                                    {
+                                        Id = movieId,
+                                        Title = movieTitle[1],
+                                        Year = new DateTime(int.Parse(array[0]), 1, 1),
+                                        Rank = ((array[1]) == "NULL") ? 0 : double.Parse(array[1]),
+                                        Duration = int.Parse(array[2])
+                                    });
+                                    break;
+                                }
                             case ParserState.Roles:
-                            {
-                                //LOCK TABLES `roles` WRITE;
-                                //actor_id, movie_id, role
-                                //196827,333439,'Dr. Bressler'
-                                //196827,367969,'Professor Bindl'
-                                //196827,406673,'Professor Kollheim'
-                                //196828,270138,'Brett Coldyron'
+                                {
+                                    //LOCK TABLES `roles` WRITE;
+                                    //actor_id, movie_id, role
+                                    //196827,333439,'Dr. Bressler'
+                                    //196827,367969,'Professor Bindl'
+                                    //196827,406673,'Professor Kollheim'
+                                    //196828,270138,'Brett Coldyron'
 
-                                var array = line.Split(deli, StringSplitOptions.RemoveEmptyEntries);
-                                int actorId = int.Parse(array[0]);
-                                int movieId = int.Parse(array[1]);
+                                    var array = line.Split(deli, StringSplitOptions.RemoveEmptyEntries);
+                                    int actorId = int.Parse(array[0]);
+                                    int movieId = int.Parse(array[1]);
 
-                                roles.GetActors(graph.Movies[movieId]).Add(graph.Actors[actorId]);
-                                break;
-                            } 
+                                    roles.GetActors(graph.Movies[movieId]).Add(graph.Actors[actorId]);
+                                    break;
+                                }
                         }
                     }
                 }
@@ -134,11 +134,11 @@ namespace TriangleProblem.Utils.Input
                         if (actor1.Edges.Exists(e => e.StartNode == actor1 && e.EndNode == actor2))
                         {
                             edge = actor1.Edges.FirstOrDefault(e => e.StartNode == actor1 && e.EndNode == actor2);
-                            
+
                         }
                         else
                         {
-                            edge = new Edge() {StartNode = actor1, EndNode = actor2};
+                            edge = new Edge() { StartNode = actor1, EndNode = actor2 };
                             actor1.Edges.Add(edge);
                             actor2.Edges.Add(edge);
                         }

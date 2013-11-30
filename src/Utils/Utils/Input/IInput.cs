@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TriangleProblem.Utils.Input
+namespace Utils.Input
 {
     public interface IInput
     {

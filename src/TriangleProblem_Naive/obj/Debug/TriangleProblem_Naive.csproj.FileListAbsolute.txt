@@ -1,5 +1,10 @@
 C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\TriangleProblem_Naive.exe.config
 C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\TriangleProblem_Naive.exe
 C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\TriangleProblem_Naive.pdb
+C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\Entities.dll
+C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\Utils.dll
+C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\Entities.pdb
+C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\Utils.pdb
+C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\obj\Debug\TriangleProblem_Naive.csprojResolveAssemblyReference.cache
 C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\obj\Debug\TriangleProblem_Naive.exe
 C:\GitHub\TriangleProblem\src\TriangleProblem_Naive\obj\Debug\TriangleProblem_Naive.pdb
