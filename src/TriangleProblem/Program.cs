@@ -9,7 +9,8 @@ namespace TriangleProblem
 {
     public class Program
     {
-        const String FILE_PATH = "../../../../imdb/imdb-small.txt";
+        //const String FILE_PATH = "../../../../imdb/imdb-small.txt";
+        const String FILE_PATH = "../../../../imdb/imdb-r.txt";
 
         static void Main(string[] args)
         {

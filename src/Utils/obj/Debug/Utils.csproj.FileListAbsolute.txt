@@ -12,3 +12,5 @@ F:\ITU\TriangleProblem\src\Utils\bin\Debug\Entities.pdb
 F:\ITU\TriangleProblem\src\Utils\obj\Debug\Utils.csprojResolveAssemblyReference.cache
 F:\ITU\TriangleProblem\src\Utils\obj\Debug\Utils.dll
 F:\ITU\TriangleProblem\src\Utils\obj\Debug\Utils.pdb
+F:\ITU\TriangleProblem\src\Utils\bin\Debug\LumenWorks.Framework.IO.dll
+F:\ITU\TriangleProblem\src\Utils\bin\Debug\LumenWorks.Framework.IO.xml

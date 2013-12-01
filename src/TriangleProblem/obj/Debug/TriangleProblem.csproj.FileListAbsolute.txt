@@ -13,3 +13,5 @@ F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\Entities.dll
 F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\Utils.dll
 F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\Entities.pdb
 F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\Utils.pdb
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\LumenWorks.Framework.IO.dll
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\LumenWorks.Framework.IO.xml

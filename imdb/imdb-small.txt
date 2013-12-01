@@ -1,4 +1,5 @@
 LOCK TABLES `actors` WRITE;
+ 533461,'Patrie\', ren','Allen','F',5
  1,'Bruce','Lee','M',11
  2,'Will','Smith','M',9
  3,'Keanu','Reeves','M',8

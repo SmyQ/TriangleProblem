@@ -18,3 +18,5 @@ F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\Utils.pdb
 F:\ITU\TriangleProblem\src\TriangleProblem_Naive\obj\Debug\TriangleProblem_Naive.csprojResolveAssemblyReference.cache
 F:\ITU\TriangleProblem\src\TriangleProblem_Naive\obj\Debug\TriangleProblem_Naive.exe
 F:\ITU\TriangleProblem\src\TriangleProblem_Naive\obj\Debug\TriangleProblem_Naive.pdb
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\LumenWorks.Framework.IO.dll
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\LumenWorks.Framework.IO.xml

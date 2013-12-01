@@ -2,3 +2,6 @@ imdb/imdb-r.txt
 *.exe
 *.dll
 *.pdb
+*.cache
+*.cache
+*.exe

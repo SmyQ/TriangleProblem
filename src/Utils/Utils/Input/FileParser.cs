@@ -83,9 +83,10 @@ namespace Utils.Input
                                     // LOCK TABLES `movies` WRITE;
                                     //306131,'Snitch',1996,4.6,116
 
-
+                                    line = line.Replace(@"\'", "");
                                     var movieTitle = line.Split(deliMovieTitle, StringSplitOptions.RemoveEmptyEntries);
                                     int movieId = int.Parse(movieTitle[0]);
+
                                     var array = movieTitle[2].Split(deli, StringSplitOptions.RemoveEmptyEntries);
                                     graph.Movies.Add(movieId, new Movie()
                                     {
@@ -110,11 +111,15 @@ namespace Utils.Input
                                     int actorId = int.Parse(array[0]);
                                     int movieId = int.Parse(array[1]);
 
-                                    var movie = graph.Movies[movieId];
-                                    var actor = graph.Actors[actorId];
+                                    if (graph.Movies.ContainsKey(movieId) && graph.Actors.ContainsKey(actorId))
+                                    {
+                                        var movie = graph.Movies[movieId];
+                                        var actor = graph.Actors[actorId];
 
-                                    actor.Movies.Add(movie);
-                                    roles.GetActors(movie).Add(actor);
+                                        actor.Movies.Add(movie);
+                                        roles.GetActors(movie).Add(actor);
+                                    }
+                                    
                                     break;
                                 }
                         }
