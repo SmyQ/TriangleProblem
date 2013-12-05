@@ -38,7 +38,13 @@ After the structure is constructed, the actual data processing takes place.
 
 
 \subsection{Pseudocode}
-Main algorithm we implemented is FindThreePlayers. After constructing the graph, we iterate over all vertices (actors). We find for each vertex subset of size of 2 of the set of adjacent edges to that vertex. We examine each pair of edges and we find the number of common movies that actors played in together (this is a common set of the subsets - the movies from two edges).  We do that only if minimal weight of edges is higher than found (by now) maximum number of movies that actors played together. If the solution is better that the already found, we save it. We continue searching and at the end, we remove any references to the adjacent edges to the analysed vertex. This will make future iterations faster, since less edges need to be examined. We go to the next iteration. Pseudocode for the algorithm is presented below:
+Main algorithm we implemented is FindThreePlayers. After constructing the graph, we iterate over all vertices (actors). We find for each vertex all subsets of size of two of the set of adjacent edges to that vertex. We take an advantage of the fact that if an actor 1 played together in the same movie "A" with an actor 2 and the actor 1 played together with an actor 3 in the movie "A", that means that the actor 2 and the actor 3 had to play together in the movie "A". So we decided not to look for triangles in traditional way, but we look for pairs of edges having movies in common being adjacent to a specific vertex.
+\\
+We examine each pair of edges and we find the number of common movies that actors played in together (this is a common set of the subsets - the movies from two edges).  We do that only if minimal weight of edges is higher than found (by now) maximum number of movies that actors played together. 
+\\
+If the solution is better that the already found, we save it. We continue searching and at the end, we remove any references to the adjacent edges to the analysed vertex. This will make future iterations faster, since less edges need to be examined. We go to the next iteration. 
+\\
+Pseudocode for the algorithm is presented below:
 
 \begin{verbatim}
 Algorithm 1: FindThreePlayers()
@@ -62,7 +68,10 @@ Algorithm 1: FindThreePlayers()
 18	END FOR	  	                    	  
 \end{verbatim}
 
-We designed CommonMovieSubsetCount that returns number of items that are common in 2 subset given as arguments. We take advantage of the fact that the lists are sorted and we iterate over all the items in both list in linear time. The pseudocode is present below:
+
+We designed CommonMovieSubsetCount that returns number of items that are common in 2 subset given as arguments. We take advantage of the fact that the lists are sorted and we iterate over all the items in both list in linear time. 
+\\
+The pseudocode is present below:
 
 \begin{verbatim}
 Algorithm 2: CommonMovieSubsetCount(movies1, movies2)
@@ -83,4 +92,7 @@ Algorithm 2: CommonMovieSubsetCount(movies1, movies2)
 \end{verbatim}
 
 \subsection{Analysis}
-
+By not choosing to implement a traditional triangles counting, we avoided to examine three times the same triple of the actors and the number of their common movies thay played in. To be able to avoid this, we constructed a special data structure and by consolidating edges, we saved used space to save the data.
+In the worst cas scenario, when each actor played together with another one (it is not realistic situation though) we will have n vertices and n*(n - 1)/2 edges.
+\\
+Complexity of the algorithm highly depends on degree of vertices. The higher it is, the longer computation time is needed. It is related to the process of looking for subsets of size two for each vertex. On the other hand after examination of found pairs, we can remove these edges from the list, so the complexity of the graph is getting smaller in faster pace. If we did not remove edges adjacent to the analysed vertex, the complexity of the algorithm would be:  \(\sum\limits_{i=1}^n{k \choose 2}\) where k is size of of A(v), v \(\in\) V. We gain a lot by succesfully making graph having less and less edges to be examined.
