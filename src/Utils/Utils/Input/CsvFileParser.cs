@@ -8,6 +8,13 @@ using LumenWorks.Framework.IO.Csv;
 
 namespace Utils.Input
 {
+    public enum ParserState
+    {
+        Ignore,
+        Actors,
+        Movies,
+        Roles
+    }
 
     public class CsvFileParser : IParser
     {

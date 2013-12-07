@@ -10,7 +10,8 @@ namespace TriangleProblem
     public class Program
     {
         //const String FILE_PATH = "../../../../imdb/imdb-small.txt";
-        const String FILE_PATH = "../../../../imdb/imdb-r.txt";
+        //const String FILE_PATH = "../../../../imdb/imdb-r.txt";
+        const String FILE_PATH = "../../../../imdb/segments/segment_sizeOf100.csv";
 
         static void Main(string[] args)
         {
@@ -26,10 +27,14 @@ namespace TriangleProblem
 
             foreach (Actor actor in result.Actors)
             {
-                Console.WriteLine(actor.LastName);
+                Console.WriteLine(actor.Id);
             }
-            Console.WriteLine("Time elapsed: " + stopwatch.ElapsedMilliseconds);
 
+            TimeSpan time = TimeSpan.FromMilliseconds(stopwatch.ElapsedMilliseconds);
+
+            Console.WriteLine("total: "+ result.TotalMovieCount);
+            Console.WriteLine("Time elapsed (minutes): " + time.TotalMinutes);
+            Console.WriteLine("DONE");
             Console.ReadLine();
         }
     }

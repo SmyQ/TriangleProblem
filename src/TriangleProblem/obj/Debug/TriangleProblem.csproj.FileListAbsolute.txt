@@ -15,3 +15,7 @@ F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\Entities.pdb
 F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\Utils.pdb
 F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\LumenWorks.Framework.IO.dll
 F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\LumenWorks.Framework.IO.xml
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\EntityFramework.dll
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\EntityFramework.xml
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\EntityFramework.SqlServer.dll
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\EntityFramework.SqlServer.xml

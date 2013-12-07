@@ -27,7 +27,7 @@ namespace TriangleProblem_Naive
 
             foreach (Actor actor in result.Actors)
             {
-                Console.WriteLine(actor.LastName);
+                Console.WriteLine(actor.Id);
             }
             Console.WriteLine("Time elapsed: " + stopwatch.ElapsedMilliseconds);
 

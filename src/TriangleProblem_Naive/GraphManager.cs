@@ -44,7 +44,7 @@ namespace TriangleProblem_Naive
                     }
                 }
             }
-            return new Result { Actors = actors, MovieCount = count };
+            return new Result { Actors = actors, TotalMovieCount = count };
         }
 
         private IEnumerable<Movie> CommonSet(IEnumerable<Movie> set1, IEnumerable<Movie> set2)

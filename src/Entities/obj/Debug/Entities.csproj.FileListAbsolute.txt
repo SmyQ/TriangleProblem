@@ -3,3 +3,13 @@ C:\GitHub\TriangleProblem\src\Entities\bin\Debug\Entities.pdb
 C:\GitHub\TriangleProblem\src\Entities\obj\Debug\Entities.dll
 C:\GitHub\TriangleProblem\src\Entities\obj\Debug\Entities.pdb
 C:\GitHub\TriangleProblem\src\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+F:\ITU\TriangleProblem\src\Entities\bin\Debug\Entities.dll
+F:\ITU\TriangleProblem\src\Entities\bin\Debug\Entities.pdb
+F:\ITU\TriangleProblem\src\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+F:\ITU\TriangleProblem\src\Entities\obj\Debug\Entities.dll
+F:\ITU\TriangleProblem\src\Entities\obj\Debug\Entities.pdb
+F:\ITU\TriangleProblem\src\Entities\bin\Debug\Entities.dll.config
+F:\ITU\TriangleProblem\src\Entities\bin\Debug\EntityFramework.dll
+F:\ITU\TriangleProblem\src\Entities\bin\Debug\EntityFramework.SqlServer.dll
+F:\ITU\TriangleProblem\src\Entities\bin\Debug\EntityFramework.xml
+F:\ITU\TriangleProblem\src\Entities\bin\Debug\EntityFramework.SqlServer.xml

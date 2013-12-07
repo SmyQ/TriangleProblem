@@ -19,27 +19,6 @@ namespace TriangleProblem.Utils.Computation
             RemoveEdges(Graph.Actors[0]);
         }
 
-        /*
-                         * MOVIES ← 0;
-                {a1,a2,a3};
-                FOR v ∈ V DO
-                  FOR i ← 0 to size of Α(v) DO
-                     FOR j ← i + 1 to size of Α(v) DO
-                      e1 ← FIND i ∈ Α(v);
-                      e2 ← FIND j ∈ Α(v);
-                      IF(MOVIES < MIN(W(e1),W(e2))) THEN
-                        COUNT ← CommonMovieSubsetCount(e1,e2)
-                        IF(MOVIES < COUNT) THEN
-                         MOVIES ← COUNT;
-                         {a1,a2,a3} ← SET(Π(e1),Π(e2))
-                        END IF
-                      END IF
-                      END FOR
-                  END FOR
-                 Remove A(v);
-                END FOR
-*/
-
         public Result FindTreeActorsThatPlayedInMostMovies()
         {
             int movies_count = 0;
@@ -49,13 +28,15 @@ namespace TriangleProblem.Utils.Computation
             {
                 for (int i = 0; i < actor.Edges.Count; i++)
                 {
+                    List<Movie> movies1 = new List<Movie>(actor.Edges[i].CommonMovies);
+                    if (movies_count >= movies1.Count)
+                        continue;
                     for (int j = i + 1; j < actor.Edges.Count; j++)
                     {
-                        List<Movie> movies1 = new List<Movie>(actor.Edges[i].CommonMovies);
                         List<Movie> movies2 = new List<Movie>(actor.Edges[j].CommonMovies);
-                        if (movies_count < Math.Min(movies1.Count, movies2.Count))
-                        {
-                            int count = CommonMovieSubsetCount(movies1, movies2);
+                        if (movies_count >= movies2.Count)
+                            continue;
+                        int count = CommonMovieSubsetCount(movies1, movies2);
                             if (movies_count < count)
                             {
                                 movies_count = count;
@@ -78,10 +59,13 @@ namespace TriangleProblem.Utils.Computation
                                 }
                             }
                         }
-                    }
+                    
                 }
                 RemoveEdges(actor);
             }
+
+            result.TotalMovieCount = movies_count;
+
             return result;
         }
 

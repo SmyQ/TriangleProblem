@@ -5,3 +5,16 @@ imdb/imdb-r.txt
 *.cache
 *.cache
 *.exe
+imdb/actor.csv
+imdb/imdb-small.txt
+imdb/movie.csv
+imdb/result.csv
+imdb/result.txt
+imdb/role.csv
+imdb/segment_1-15000.csv
+imdb/segments/segment_0.csv
+imdb/segments/segment_1.csv
+imdb/segments/segment_fake.csv
+imdb/segments/segment_sizeOf100.csv
+imdb/select.sql
+imdb/spielberg.csv

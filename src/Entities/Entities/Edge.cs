@@ -8,11 +8,12 @@ namespace Entities
 {
     public class Edge
     {
-        private List<Movie> _commonMovies; 
+        private List<Movie> _commonMovies;
 
-        public Actor StartNode { get; set; }
-        public Actor EndNode { get; set; }
-        public List<Movie> CommonMovies
+        public int Id { get; set; }
+        public virtual Actor StartNode { get; set; }
+        public virtual Actor EndNode { get; set; }
+        public virtual List<Movie> CommonMovies
         {
             get { return _commonMovies ?? (_commonMovies = new List<Movie>());  } 
             set { _commonMovies = value; }

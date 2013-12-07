@@ -22,6 +22,6 @@ namespace Entities
             }
         }
 
-        public int MovieCount { get; set; }
+        public int TotalMovieCount { get; set; }
     }
 }

@@ -20,3 +20,5 @@ F:\ITU\TriangleProblem\src\TriangleProblem_Naive\obj\Debug\TriangleProblem_Naive
 F:\ITU\TriangleProblem\src\TriangleProblem_Naive\obj\Debug\TriangleProblem_Naive.pdb
 F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\LumenWorks.Framework.IO.dll
 F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\LumenWorks.Framework.IO.xml
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\EntityFramework.dll
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Debug\EntityFramework.xml
