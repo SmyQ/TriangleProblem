@@ -1,0 +1,6 @@
+C:\GitHub\TriangleProblem\src\MisraGries\bin\Debug\MisraGries.exe.config
+C:\GitHub\TriangleProblem\src\MisraGries\obj\Debug\MisraGries.csprojResolveAssemblyReference.cache
+C:\GitHub\TriangleProblem\src\MisraGries\bin\Debug\MisraGries.exe
+C:\GitHub\TriangleProblem\src\MisraGries\bin\Debug\MisraGries.pdb
+C:\GitHub\TriangleProblem\src\MisraGries\obj\Debug\MisraGries.exe
+C:\GitHub\TriangleProblem\src\MisraGries\obj\Debug\MisraGries.pdb
