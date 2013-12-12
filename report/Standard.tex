@@ -1,0 +1,27 @@
+\label{Standard}
+\section{Standard approach}
+
+We firstly started with implementing data streaming technique. Since our goal is to find heavy hitters, we chose Misra-Gries algorithm to save space and to process fast large amount fo data.
+
+\label{MisraGries}
+\subsection{Pseudocode}
+The idea of the algorithm is to process data movie by movie. Each movie has a list of actors and while processing them we create triplets for each movie. Then we simply count triplets by adding them to the cache table.
+\\
+Let m denote number of movies..
+
+\begin{verbatim}
+Algorithm 1: MisraGries()
+2	{a1,a2,a3};
+3	FOREACH movie DO
+4	  FOR i ← 0 to size of A(movie) DO
+7	      FOR j ← i + 1 to size of A(movie) DO
+5		  FOR k ← j + 1 to size of A(movie) DO	          
+16	      END FOR
+17	    END IF
+18	  END FOR
+19	END FOREACH
+20	RETURN moviesCount, {a1,a2,a3};	  	                    	  
+\end{verbatim}
+
+\label{AnalysisMisraGries}
+\subsection{Analysis}

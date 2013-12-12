@@ -4,13 +4,13 @@
 The algorithm we are presenting works on two main steps:
 \begin{itemize}
   \item Build the data structure - the efficiency of the algorithm is determined by the data structure it runs on. On the other hand, the data structure is specifically designed to solve this problem.
-  \item Traverse data structure and output result - the algorithm works by  discarding part of the information on every iteration, thereby reducing the size of the problem.
+  \item Traverse data structure and output result - the algorithm works by looping through all the actors and finding the most promising connections.
 \end{itemize} 
 
 \subsection{Notations}
-Let G = (V,E) be an weighted, undirected simple graph and let n = \(\lvert V\rvert\) and m = \(\lvert E\rvert\).
+Let G = (V,E) be a weighted, directed simple graph and let n = \(\lvert V\rvert\) and m = \(\lvert E\rvert\).
 
-A vertex v denotes an actor. Any edge e between vertices \(v_1\) and \(v_2\) denotes a set of movies these two actors have played together. Weight of the edge, W(e) denotes the size of that set.
+A vertex v denotes an actor. Any edge e between vertices \(v_1\) and \(v_2\) denotes a set of movies these two actors have played together. Weight of the edge, W(e) denotes the size of that set. An edge is always directed from the actor with lower Id to the actor with higher Id.
 
 Denote by A(v) the set of adjacent edges to vertex v.
 
@@ -18,12 +18,10 @@ SET(e) is the set of (two) vertices adjacent to an edge e.
 
 Unique(\(v_1, v_2,... v_n)\) - returns a set of unique elements.
 
-Remove(v) - removes edges adjacent to v from the graph G.
-
 MovieCount denotes the biggest number found so far of common movies between any given three actors.
 
 \subsection{Data structure}
-As mentioned in the previous section, the algorithm works starts by first building the data structure. The data structure is a graph, where vertices represent actors and edges between them represent the movie(s) these actors played together in. 
+As mentioned in the previous section, the algorithm starts by first building the data structure. The data structure is a graph, where vertices represent actors and edges between them represent the movie(s) these actors played together in. 
 
 \begin{figure}[ht!]
 \centering
@@ -38,7 +36,7 @@ After the structure is constructed, the actual data processing takes place.
 
 
 \subsection{Pseudocode}
-Main algorithm we implemented is FindThreePlayers. After constructing the graph, we iterate over all vertices (actors). We find for each vertex all subsets of size of two of the set of adjacent edges to that vertex. We take an advantage of the fact that if an actor 1 played together in the same movie "A" with an actor 2 and the actor 1 played together with an actor 3 in the movie "A", that means that the actor 2 and the actor 3 had to play together in the movie "A". So we decided not to look for triangles in traditional way, but we look for pairs of edges having movies in common being adjacent to a specific vertex.
+Main algorithm we implemented is FindThreeActors. After constructing the graph, we iterate over all vertices (actors). We find for each vertex all subsets of size of two of the set of adjacent edges to that vertex. We take an advantage of the fact that if an actor 1 played together in the same movie "A" with an actor 2 and the actor 1 played together with an actor 3 in the movie "A", that means that the actor 2 and the actor 3 had to play together in the movie "A". So we decided not to look for triangles in traditional way, but we look for pairs of edges having movies in common being adjacent to a specific vertex.
 \\
 We examine each pair of edges and we find the number of common movies that actors played in together (this is a common set of the subsets - the movies from two edges).  We do that only if minimal weight of edges is higher than found (by now) maximum number of movies that actors played together. 
 \\
@@ -47,25 +45,27 @@ If the solution is better that the already found, we save it. We continue search
 Pseudocode for the algorithm is presented below:
 
 \begin{verbatim}
-Algorithm 1: FindThreePlayers()
+Algorithm 2: FindThreeActors(graph)
 1	moviesCount ← 0;
 2	{a1,a2,a3};
 3	FOR v ∈ V DO
 4	  FOR i ← 0 to size of A(v) DO
-5	      FOR j ← i + 1 to size of A(v) DO
-6	          e1←A(v)[i];
-7	          e2←A(v)[j];
-8	          IF MoviesCount < MIN(W(e1), W(e2)) THEN
-9	              count ← CommonMovieSubsetCount(e1, e2);
-10	             IF moviesCount < count THEN
-11	                  movieCount ← count;
-12	                  {a1,a2,a3} ← Unique(SET(e1), SET(e2));
-13	             END IF
-14	          END IF
-15	      END FOR
-16	  END FOR
-17	Remove A(v);
-18	END FOR	  	                    	  
+5	    e1←A(v)[i];
+6	    IF MoviesCount < W(e1) THEN
+7	      FOR j ← i + 1 to size of A(v) DO	          
+8	          e2←A(v)[j];
+9	          IF MoviesCount < W(e2) THEN
+10	              count ← CommonMovieSubsetCount(e1, e2);
+11	             IF moviesCount < count THEN
+12	                  movieCount ← count;
+13	                  {a1,a2,a3} ← Unique(SET(e1), SET(e2));
+14	             END IF
+15	          END IF
+16	      END FOR
+17	    END IF
+18	  END FOR
+19	END FOR
+20	RETURN moviesCount, {a1,a2,a3};	  	                    	  
 \end{verbatim}
 
 
@@ -74,10 +74,10 @@ We designed CommonMovieSubsetCount that returns number of items that are common 
 The pseudocode is present below:
 
 \begin{verbatim}
-Algorithm 2: CommonMovieSubsetCount(movies1, movies2)
+Algorithm 3: CommonMovieSubsetCount(movies1, movies2)
 1	count ← 0;
 2	p1 ← 0;
-3	p2← 0;
+3	p2 ← 0;
 4	WHILE p1 < W(movies1) AND p2 < W(movies2)
 5	  IF movies1[p1] = movies2[p2] THEN
 6	    INCREMENT(count);
@@ -91,8 +91,21 @@ Algorithm 2: CommonMovieSubsetCount(movies1, movies2)
 14	RETURN count;
 \end{verbatim}
 
+\subsection{Parallelism}
+Since the IMDB database is enormous and building graph for such an amount of data, requires lots of RAM, we wanted to split the problem and make computations on separate parts in parallel. We took care of not loosing any data and not processing any data more times than once. The other important thing was to split data into parts that require the same amount of work for CPU.
+\\
+Each separate group contains specific number of actors and edges coming out from them. The division is done by creating a list of edges (an edge contains 2 actors and a movie these 2 actors played together), where there is no repetition of edges (an edge is always directed from an actor with higher Id to an actor with lower Id). We sorted the list according to the Id of the first actor (in this actor with lower Id in an edge). We noticed that since an edge goes to the actor with higher Id, vertices with lower Ids have much more edges going out from it than getting in, so we could not just picked the first x actors from the list. To split data evenly, we just picked every ???? actor from the sorted list we have. That guaranties that workload on every part of data is similar.
+\\
+We claim that we have no repetition of processing data. It is shown on the picture below....
+All three vertices are connected to each other and we put them in three different groups (red, blue and green). In group red we have a vertex A and two edges coming out from this vertex. In blue group we have a vertex B and one edge coming out from it. In group green we have only vertex C without any edges. We can see that the presented triple will be analysed only once when we will process the vertex A in group red.
+\\
+The presented division allows us to run computations in parallel. Each thread results in a triplet and number of movies actors played together. After finishing computing all the data, we just need to aggregate the results and find the triplet that played in the most number of movies. The picture !!!!!
+\\
+
 \subsection{Analysis}
 By not choosing to implement a traditional triangles counting, we avoided to examine three times the same triple of the actors and the number of their common movies thay played in. To be able to avoid this, we constructed a special data structure and by consolidating edges, we saved used space to save the data.
-In the worst cas scenario, when each actor played together with another one (it is not realistic situation though) we will have n vertices and n*(n - 1)/2 edges.
+In the worst case scenario, when each actor played together with another one (it is not realistic situation though) we will have n vertices and n*(n - 1)/2 edges.
 \\
-Complexity of the algorithm highly depends on degree of vertices. The higher it is, the longer computation time is needed. It is related to the process of looking for subsets of size two for each vertex. On the other hand after examination of found pairs, we can remove these edges from the list, so the complexity of the graph is getting smaller in faster pace. If we did not remove edges adjacent to the analysed vertex, the complexity of the algorithm would be:  \(\sum\limits_{i=1}^n{k \choose 2}\) where k is size of of A(v), v \(\in\) V. We gain a lot by succesfully making graph having less and less edges to be examined.
+Complexity of the algorithm highly depends on degree of vertices. The higher it is, the longer computation time is needed. It is related to the process of looking for subsets of size two for each vertex. The complexity of the algorithm is \(\sum\limits_{i=1}^n{k_i \choose 2}\) where \(k_i\) is size of A(\(v_i)\), v \(\in\) V, which we can reduce to \(\sum\limits_{i=1}^n{k_i^2}\).
+\\
+Comparison with Misra-Gries...
