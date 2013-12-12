@@ -1,0 +1,10 @@
+C:\Users\agama_000\Documents\TriangleProblem\src\CountTriangles\bin\Debug\CountTriangles.exe.config
+C:\Users\agama_000\Documents\TriangleProblem\src\CountTriangles\bin\Debug\CountTriangles.exe
+C:\Users\agama_000\Documents\TriangleProblem\src\CountTriangles\bin\Debug\CountTriangles.pdb
+C:\Users\agama_000\Documents\TriangleProblem\src\CountTriangles\bin\Debug\Entities.dll
+C:\Users\agama_000\Documents\TriangleProblem\src\CountTriangles\bin\Debug\Utils.dll
+C:\Users\agama_000\Documents\TriangleProblem\src\CountTriangles\bin\Debug\Entities.pdb
+C:\Users\agama_000\Documents\TriangleProblem\src\CountTriangles\bin\Debug\Utils.pdb
+C:\Users\agama_000\Documents\TriangleProblem\src\CountTriangles\obj\Debug\CountTriangles.csprojResolveAssemblyReference.cache
+C:\Users\agama_000\Documents\TriangleProblem\src\CountTriangles\obj\Debug\CountTriangles.exe
+C:\Users\agama_000\Documents\TriangleProblem\src\CountTriangles\obj\Debug\CountTriangles.pdb
