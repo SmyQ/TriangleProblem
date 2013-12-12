@@ -19,3 +19,4 @@ F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\EntityFramework.dll
 F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\EntityFramework.xml
 F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\EntityFramework.SqlServer.dll
 F:\ITU\TriangleProblem\src\TriangleProblem\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub\TriangleProblem\src\TriangleProblem\bin\Debug\TriangleProblem.exe.config
