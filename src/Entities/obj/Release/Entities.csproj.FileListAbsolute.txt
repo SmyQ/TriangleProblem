@@ -1,0 +1,10 @@
+F:\ITU\TriangleProblem\src\Entities\bin\Release\Entities.dll.config
+F:\ITU\TriangleProblem\src\Entities\bin\Release\Entities.dll
+F:\ITU\TriangleProblem\src\Entities\bin\Release\Entities.pdb
+F:\ITU\TriangleProblem\src\Entities\bin\Release\EntityFramework.dll
+F:\ITU\TriangleProblem\src\Entities\bin\Release\EntityFramework.SqlServer.dll
+F:\ITU\TriangleProblem\src\Entities\bin\Release\EntityFramework.xml
+F:\ITU\TriangleProblem\src\Entities\bin\Release\EntityFramework.SqlServer.xml
+F:\ITU\TriangleProblem\src\Entities\obj\Release\Entities.csprojResolveAssemblyReference.cache
+F:\ITU\TriangleProblem\src\Entities\obj\Release\Entities.dll
+F:\ITU\TriangleProblem\src\Entities\obj\Release\Entities.pdb

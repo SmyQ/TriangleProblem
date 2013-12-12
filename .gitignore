@@ -18,3 +18,14 @@ imdb/segments/segment_fake.csv
 imdb/segments/segment_sizeOf100.csv
 imdb/select.sql
 imdb/spielberg.csv
+imdb/segments/all.csv
+imdb/segments/segment_0-2.csv
+imdb/segments/segment_0-4.csv
+imdb/segments/segment_1-2.csv
+imdb/segments/segment_1-4.csv
+imdb/segments/segment_100.csv
+imdb/segments/segment_2-4.csv
+imdb/segments/segment_2.csv
+imdb/segments/segment_3-4.csv
+imdb/segments/segment_9.csv
+results/~$results.xlsx

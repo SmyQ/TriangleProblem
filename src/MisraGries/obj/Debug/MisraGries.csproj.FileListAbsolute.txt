@@ -4,3 +4,9 @@ C:\GitHub\TriangleProblem\src\MisraGries\bin\Debug\MisraGries.exe
 C:\GitHub\TriangleProblem\src\MisraGries\bin\Debug\MisraGries.pdb
 C:\GitHub\TriangleProblem\src\MisraGries\obj\Debug\MisraGries.exe
 C:\GitHub\TriangleProblem\src\MisraGries\obj\Debug\MisraGries.pdb
+F:\ITU\TriangleProblem\src\MisraGries\bin\Debug\MisraGries.exe.config
+F:\ITU\TriangleProblem\src\MisraGries\bin\Debug\MisraGries.exe
+F:\ITU\TriangleProblem\src\MisraGries\bin\Debug\MisraGries.pdb
+F:\ITU\TriangleProblem\src\MisraGries\obj\Debug\MisraGries.csprojResolveAssemblyReference.cache
+F:\ITU\TriangleProblem\src\MisraGries\obj\Debug\MisraGries.exe
+F:\ITU\TriangleProblem\src\MisraGries\obj\Debug\MisraGries.pdb

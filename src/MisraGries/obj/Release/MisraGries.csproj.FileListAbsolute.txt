@@ -1,0 +1,6 @@
+F:\ITU\TriangleProblem\src\MisraGries\bin\Release\MisraGries.exe.config
+F:\ITU\TriangleProblem\src\MisraGries\bin\Release\MisraGries.exe
+F:\ITU\TriangleProblem\src\MisraGries\bin\Release\MisraGries.pdb
+F:\ITU\TriangleProblem\src\MisraGries\obj\Release\MisraGries.csprojResolveAssemblyReference.cache
+F:\ITU\TriangleProblem\src\MisraGries\obj\Release\MisraGries.exe
+F:\ITU\TriangleProblem\src\MisraGries\obj\Release\MisraGries.pdb

@@ -1,0 +1,16 @@
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\TriangleProblem.exe.config
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\TriangleProblem.exe
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\TriangleProblem.pdb
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\Entities.dll
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\EntityFramework.dll
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\EntityFramework.SqlServer.dll
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\Utils.dll
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\LumenWorks.Framework.IO.dll
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\Entities.pdb
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\Utils.pdb
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\EntityFramework.xml
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\EntityFramework.SqlServer.xml
+F:\ITU\TriangleProblem\src\TriangleProblem\bin\Release\LumenWorks.Framework.IO.xml
+F:\ITU\TriangleProblem\src\TriangleProblem\obj\Release\TriangleProblem.csprojResolveAssemblyReference.cache
+F:\ITU\TriangleProblem\src\TriangleProblem\obj\Release\TriangleProblem.exe
+F:\ITU\TriangleProblem\src\TriangleProblem\obj\Release\TriangleProblem.pdb

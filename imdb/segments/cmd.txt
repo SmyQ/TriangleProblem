@@ -1,0 +1,3 @@
+sqlcmd -S SMYQ\SQL2008R2EXPRESS -d imdb -E -Q "set nocount on SELECT * FROM [imdb].[dbo].[Edges] WHERE Actor1%10 = 0" -o "all.csv" -h-1 -s"," -w 700 -W
+
+sqlcmd -S SMYQ\SQL2008R2EXPRESS -d imdb -E -Q "set nocount on SELECT COUNT(DISTINCT MovieId) FROM [imdb].[dbo].[Edges] WHERE Actor1%0 = 0" -o "all.csv" -h-1 -s"," -w 700 -W

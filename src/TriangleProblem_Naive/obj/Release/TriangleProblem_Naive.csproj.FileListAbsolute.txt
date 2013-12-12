@@ -1,0 +1,14 @@
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Release\TriangleProblem_Naive.exe.config
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Release\TriangleProblem_Naive.exe
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Release\TriangleProblem_Naive.pdb
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Release\Entities.dll
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Release\Utils.dll
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Release\EntityFramework.dll
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Release\LumenWorks.Framework.IO.dll
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Release\Entities.pdb
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Release\Utils.pdb
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Release\EntityFramework.xml
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\bin\Release\LumenWorks.Framework.IO.xml
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\obj\Release\TriangleProblem_Naive.csprojResolveAssemblyReference.cache
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\obj\Release\TriangleProblem_Naive.exe
+F:\ITU\TriangleProblem\src\TriangleProblem_Naive\obj\Release\TriangleProblem_Naive.pdb

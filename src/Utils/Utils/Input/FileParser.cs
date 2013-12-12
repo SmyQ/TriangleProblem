@@ -52,7 +52,7 @@ namespace Utils.Input
                     {
                         edge = new Edge() { StartNode = actor1, EndNode = actor2 };
                         actor1.Edges.Add(edge);
-                        actor2.Edges.Add(edge);
+                        //actor2.Edges.Add(edge);
                     }
                     edge.CommonMovies.Add(movie);
                 }

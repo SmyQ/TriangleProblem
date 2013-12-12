@@ -61,7 +61,7 @@ namespace TriangleProblem.Utils.Computation
                         }
                     
                 }
-                RemoveEdges(actor);
+                //RemoveEdges(actor);
             }
 
             result.TotalMovieCount = movies_count;

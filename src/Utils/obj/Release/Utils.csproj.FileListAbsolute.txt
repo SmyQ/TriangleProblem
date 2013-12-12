@@ -1,0 +1,11 @@
+F:\ITU\TriangleProblem\src\Utils\bin\Release\Utils.dll
+F:\ITU\TriangleProblem\src\Utils\bin\Release\Utils.pdb
+F:\ITU\TriangleProblem\src\Utils\bin\Release\Entities.dll
+F:\ITU\TriangleProblem\src\Utils\bin\Release\EntityFramework.dll
+F:\ITU\TriangleProblem\src\Utils\bin\Release\LumenWorks.Framework.IO.dll
+F:\ITU\TriangleProblem\src\Utils\bin\Release\Entities.pdb
+F:\ITU\TriangleProblem\src\Utils\bin\Release\EntityFramework.xml
+F:\ITU\TriangleProblem\src\Utils\bin\Release\LumenWorks.Framework.IO.xml
+F:\ITU\TriangleProblem\src\Utils\obj\Release\Utils.csprojResolveAssemblyReference.cache
+F:\ITU\TriangleProblem\src\Utils\obj\Release\Utils.dll
+F:\ITU\TriangleProblem\src\Utils\obj\Release\Utils.pdb
