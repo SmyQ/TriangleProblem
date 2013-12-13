@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,9 +46,13 @@ namespace CountTriangles
                         {
                             foreach (var item in A[adjacent.Id].Intersect(A[actor.Key]))
                             {
-                                //if (Math.Min(Math.Min(adjacent.Movies.Count, actor.Value.Movies.Count), item.Movies.Count) > movies_count)
-                                {
-                                    int movies = CommonMovieSubsetCount(adjacent.Movies, actor.Value.Movies);
+                                    List<Movie> movies1 = actor.Value.Edges.First(x => x.EndNode.Equals(adjacent)).CommonMovies;
+                                    List<Movie> movies2;
+                                    if(actor.Key < item.Id)
+                                        movies2 = actor.Value.Edges.First(x => x.EndNode.Equals(item)).CommonMovies;
+                                    else
+                                        movies2 = actor.Value.Edges.First(x => x.StartNode.Equals(item)).CommonMovies;
+                                    int movies = CommonMovieSubsetCount(movies1, movies2);
                                     if (movies_count < movies)
                                     {
                                         movies_count = movies;
@@ -56,7 +60,6 @@ namespace CountTriangles
                                         res.Actors[1] = actor.Value;
                                         res.Actors[2] = item;
                                     }
-                                }
                             }
                         }
                     }
