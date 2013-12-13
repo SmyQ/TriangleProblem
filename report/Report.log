@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.12.1)  12 DEC 2013 20:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.12.1)  13 DEC 2013 15:31
 entering extended mode
 **C:/GitHub/TriangleProblem/report/report.tex
 (C:/GitHub/TriangleProblem/report/report.tex
@@ -438,9 +438,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--2
 
  []
 
-) (C:\GitHub\TriangleProblem\report\Algorithm.tex [1
+[1
 
-{C:/Users/Plamen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/Plamen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
+(C:\GitHub\TriangleProblem\report\Algorithm.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 6.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -456,14 +457,14 @@ File: resources/project_problem_illustration.png Graphic file (type png)
 Package pdftex.def Info: resources/project_problem_illustration.png used on inp
 ut line 28.
 (pdftex.def)             Requested size: 369.88582pt x 251.83461pt.
- [2]
+ [2] [3 <C:/GitHub/TriangleProblem/report/resources/project_problem_illustratio
+n.png>]
 (C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 )
 (C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-34.def
 File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
-) [3 <C:/GitHub/TriangleProblem/report/resources/project_problem_illustration.p
-ng>]
+)
 Underfull \hbox (badness 10000) in paragraph at lines 95--104
 
  []
@@ -474,9 +475,9 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 109.
 
-) (C:\GitHub\TriangleProblem\report\Experiments.tex)
+) (C:\GitHub\TriangleProblem\report\Experiments.tex [5])
 (C:\GitHub\TriangleProblem\report\Conclusion.tex)
-(C:\GitHub\TriangleProblem\report\References.tex) [5] [6]
+(C:\GitHub\TriangleProblem\report\References.tex) [6]
 (C:\GitHub\TriangleProblem\report\report.aux)
 
 LaTeX Warning: There were undefined references.
@@ -485,11 +486,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  6440 strings out of 493921
  94215 string characters out of 3147279
- 168422 words of memory out of 3000000
+ 169422 words of memory out of 3000000
  9634 multiletter control sequences out of 15000+200000
  11986 words of font info for 43 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,10n,43p,855b,647s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,10n,43p,1022b,647s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
@@ -502,7 +503,7 @@ b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (6 pages, 492539 bytes).
+Output written on report.pdf (6 pages, 492627 bytes).
 PDF statistics:
  76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

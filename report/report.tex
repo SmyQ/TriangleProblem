@@ -56,14 +56,14 @@
 \maketitle
 
 \begin{abstract}
-Your abstract goes here...
-problem - graph; possible algorithms for solving; the algorithm we propose algorithm - some tweaks for the specific problem at hand, that significantly improve processing time; we give a suprisingly simple enhancements...
+
+Large data is difficult to process. The main difficulty comes from the fact it is not possible to store the data in memory and directly work with it. A number of algorithms are designed for bypassing this problem, each of them with its own strategy. One way is to split the data into bits that can be computed independently, alternatively if approximated result suffices, a streaming algorithm can be utilized. In this paper we explore two such algorithms, comparing their running times and space usage. The first algorithm is designed specifically for solving the problem at hand. This makes it possible to apply some seemngly small tweaks, which increase performance dramatically. The streaming algorithm we turn our attention to is Misra-Gries. Furthermore, the concept of parallelism is explored in the context of our solution. It is shown that with very little additional code the consequtive algorithm can be easily parallelised. This further increases the performance.
 
 \end{abstract}
 
 \subsubsection*{Keywords}
 \label{Keywords}
-graph, triangles count
+IMDB, graph, triples count, streaming parallelism
 
 
 \input{./Introduction.tex}
