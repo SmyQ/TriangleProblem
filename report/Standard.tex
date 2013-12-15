@@ -8,7 +8,7 @@ We started with implementing a data streaming technique. Since our goal is to fi
 The idea of our version of Misra-Gries is to process data movie by movie. Each movie has a list of actors and while processing them we generate all triplets for each movie. Then we maintain a hash table which contains pairs of triplets and their respective count indicating relative number of occurences of the triplet. We add a triplet to the table if it does not appear there yet or we increment count of analyzed triplet. The result of the analysis is the triplet with the highest count. For more details we present pseudocode of the algorithm in paragraph below.
 \\
 Let m denote number of movies and A(i) denotes list of actors playing in a given movie i.
-Let H be a hash table containing k pairs: triplet (t) and its count (\(count_t)\).
+Let H be a hash table containing h pairs: triplet (t) and its count (\(count_t)\).
 \begin{verbatim}
 Algorithm 1: MisraGries()
 1	FOREACH movie DO
@@ -41,4 +41,6 @@ The cache size was determined based on calculations and experiments. We estimate
 \\
 \subsection{Analysis}
 \label{AnalysisMisraGries}
-Memory usage in Misra-Gries algorithm is very little, the space is needed only for the hash table. Complexity of the algorithm highly depends on the size of cache and the dataset to be processed. The bigger they are, the longer computation time is needed. The complexity of the algorithm is \(\sum\limits_{i=1}^m{a_i \choose 3}*k\) where k is size cache size. We can reduce it to \(\sum\limits_{i=1}^m{a_i^3}*k\).
+Memory usage in Misra-Gries algorithm is very little, the space is needed only for the hash table. Complexity of the algorithm highly depends on the size of cache and the dataset to be processed. The bigger they are, the longer computation time is needed. The complexity of the algorithm is \(\sum\limits_{i=1}^m{a_i \choose 3}*h\) where h is size cache size. The complexity of the algorithm is calculated below.
+\\
+t(m, a, h) = \(\sum\limits_{i=1}^m{a_i \choose 3}*h\) \(\approx\) \(\sum\limits_{i=1}^m{a_i^3}*h\) \(\approx\) \(m * a_{max}^3 * h\) = O(\(m * a_{max}^3 * h\))
