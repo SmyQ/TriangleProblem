@@ -69,6 +69,8 @@ The analysis made in section \ref{OurAlgorithmAnalysis} predicted, the worts cas
 \label{ExperimentsParallelism}
 As already mentioned, the graph is built in such a way, that the data is easy to split. This property allows for easy parallelisation. Parallelism can be achieved by simply dividing the data into groups and processing them parallel.
 We ran our experiments on an 8-core machine, which allows for a maximum of 8 threads running simultaneously. This makes the algorithm almost 8 times faster. Table \ref{resParallelExecution} show the time needed to process 100\% of the data set with single thread and eight threads running concurrently.
+//
+Important to note here, is what happens in the case of when the data set does not fit in memory. We could have multiple parallel executions in this case. Each parallel execution will be performed sequentially. Take for example the case when the whole data set is of size 10 GB, while we have 4 GB available. We can have 3 sequential executions (2x4 + 1x2). Each of them will use all the available cores - will be executed in parallel.
 
 
 \begin{table}[ht]
