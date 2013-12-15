@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.12.1)  15 DEC 2013 19:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.12.1)  15 DEC 2013 20:19
 entering extended mode
 **C:/GitHub/TriangleProblem/report/report.tex
 (C:/GitHub/TriangleProblem/report/report.tex
@@ -174,10 +174,48 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
 )
+(C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pdfpages.sty
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+
+(C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+))
+(C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pppdftex.def
+File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box28
+\AM@toc@title=\toks20
+\c@AM@survey=\count111
+\AM@templatesizebox=\box29
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks20
-\inpenc@posthook=\toks21
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
 
 (C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
@@ -188,18 +226,14 @@ Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 (C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
-\uc@secondtry=\count111
-\uc@combtoks=\toks22
-\uc@combtoksb=\toks23
-\uc@temptokena=\toks24
+\uc@secondtry=\count112
+\uc@combtoks=\toks23
+\uc@combtoksb=\toks24
+\uc@temptokena=\toks25
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
@@ -207,9 +241,9 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count112
-\Gm@cntv=\count113
-\c@Gm@tempcnt=\count114
+\Gm@cnth=\count113
+\Gm@cntv=\count114
+\c@Gm@tempcnt=\count115
 \Gm@bindingoffset=\dimen123
 \Gm@wd@mp=\dimen124
 \Gm@odd@mp=\dimen125
@@ -218,7 +252,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen128
 \Gm@layouthoffset=\dimen129
 \Gm@layoutvoffset=\dimen130
-\Gm@dimlist=\toks25
+\Gm@dimlist=\toks26
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 (C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.sty
@@ -233,19 +267,19 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen138
 \cmidrulekern=\dimen139
 \defaultaddspace=\dimen140
-\@cmidla=\count115
-\@cmidlb=\count116
+\@cmidla=\count116
+\@cmidlb=\count117
 \@aboverulesep=\dimen141
 \@belowrulesep=\dimen142
-\@thisruleclass=\count117
-\@lastruleclass=\count118
+\@thisruleclass=\count118
+\@lastruleclass=\count119
 \@thisrulewidth=\dimen143
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen144
 \extrarowheight=\dimen145
-\NC@list=\toks26
+\NC@list=\toks27
 \extratabsurround=\skip53
 \backup@length=\skip54
 )
@@ -255,12 +289,12 @@ Package: paralist 2013/06/09 v2.4 Extended list environments
 \plpartopsep=\skip56
 \plitemsep=\skip57
 \plparsep=\skip58
-\pl@lab=\toks27
+\pl@lab=\toks28
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks28
-\verbatim@line=\toks29
+\every@verbatim=\toks29
+\verbatim@line=\toks30
 \verbatim@in@stream=\read1
 )
 (C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\subfig\subfig.sty
@@ -280,19 +314,19 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@parindent=\dimen151
 \caption@hangindent=\dimen152
 )
-\c@ContinuedFloat=\count119
+\c@ContinuedFloat=\count120
 )
-\c@KVtest=\count120
+\c@KVtest=\count121
 \sf@farskip=\skip59
 \sf@captopadj=\dimen153
 \sf@capskip=\skip60
 \sf@nearskip=\skip61
-\c@subfigure=\count121
-\c@subfigure@save=\count122
-\c@lofdepth=\count123
-\c@subtable=\count124
-\c@subtable@save=\count125
-\c@lotdepth=\count126
+\c@subfigure=\count122
+\c@subfigure@save=\count123
+\c@lofdepth=\count124
+\c@subtable=\count125
+\c@subtable@save=\count126
+\c@lotdepth=\count127
 \sf@top=\skip62
 \sf@bottom=\skip63
 )
@@ -360,33 +394,35 @@ Package tocloft Info: The document has section divisions on input line 44.
 \cftsubtabnumwidth=\skip109
 )
 (C:\GitHub\TriangleProblem\report\report.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
 
 (C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
+\scratchcounter=\count128
 \scratchdimen=\dimen154
-\scratchbox=\box28
-\nofMPsegments=\count128
-\nofMParguments=\count129
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count130
+\scratchbox=\box30
+\nofMPsegments=\count129
+\nofMParguments=\count130
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count131
 \MPscratchDim=\dimen155
-\MPnumerator=\count131
-\makeMPintoPDFobject=\count132
-\everyMPtoPDFconversion=\toks31
-) (C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\ucsencs.def
+\MPnumerator=\count132
+\makeMPintoPDFobject=\count133
+\everyMPtoPDFconversion=\toks32
+)
+\AtBeginShipoutBox=\box31
+ (C:\Users\Plamen\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 *geometry* driver: auto-detecting
@@ -496,34 +532,180 @@ File: resources/graph.png Graphic file (type png)
 <use resources/graph.png>
 Package pdftex.def Info: resources/graph.png used on input line 60.
 (pdftex.def)             Requested size: 284.52756pt x 185.46294pt.
- [9]) (C:\GitHub\TriangleProblem\report\Conclusion.tex) [10 <C:/GitHub/Triangle
-Problem/report/resources/graph.png>]
-(C:\GitHub\TriangleProblem\report\report.aux) ) 
+ [9]) (C:\GitHub\TriangleProblem\report\Conclusion.tex) <Appendixes.pdf, id=48,
+ 597.23125pt x 845.1575pt>
+File: Appendixes.pdf Graphic file (type pdf)
+ <use Appendixes.pdf>
+Package pdftex.def Info: Appendixes.pdf used on input line 76.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf>
+Package pdftex.def Info: Appendixes.pdf used on input line 76.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+ [10 <C:/GitHub/TriangleProblem/report/resources/graph.png>] [11] <Appendixes.p
+df, id=59, page=1, 597.23125pt x 845.1575pt>
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 1>
+Package pdftex.def Info: Appendixes.pdf, page1 used on input line 76.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: Appendixes.pdf Graphic file (type pdf)
+ <use Appendixes.pdf, page 1>
+Package pdftex.def Info: Appendixes.pdf, page1 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 1>
+Package pdftex.def Info: Appendixes.pdf, page1 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+ <use Appendixes.pdf, page 1>
+Package pdftex.def Info: Appendixes.pdf, page1 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 1>
+Package pdftex.def Info: Appendixes.pdf, page1 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [12 <C:/GitHub/TriangleProblem/report/Appendixes.pdf>] <Appendixes.pdf, id=84,
+ page=2, 597.23125pt x 845.1575pt>
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 2>
+Package pdftex.def Info: Appendixes.pdf, page2 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+ <use Appendixes.pdf, page 2>
+Package pdftex.def Info: Appendixes.pdf, page2 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 2>
+Package pdftex.def Info: Appendixes.pdf, page2 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [13 <C:/GitHub/TriangleProblem/report/Appendixes.pdf>] <Appendixes.pdf, id=93,
+ page=3, 597.23125pt x 845.1575pt>
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 3>
+Package pdftex.def Info: Appendixes.pdf, page3 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+ <use Appendixes.pdf, page 3>
+Package pdftex.def Info: Appendixes.pdf, page3 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 3>
+Package pdftex.def Info: Appendixes.pdf, page3 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [14 <C:/GitHub/TriangleProblem/report/Appendixes.pdf>] <Appendixes.pdf, id=97,
+ page=4, 597.23125pt x 845.1575pt>
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 4>
+Package pdftex.def Info: Appendixes.pdf, page4 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+ <use Appendixes.pdf, page 4>
+Package pdftex.def Info: Appendixes.pdf, page4 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 4>
+Package pdftex.def Info: Appendixes.pdf, page4 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [15 <C:/GitHub/TriangleProblem/report/Appendixes.pdf>] <Appendixes.pdf, id=101
+, page=5, 597.23125pt x 845.1575pt>
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 5>
+Package pdftex.def Info: Appendixes.pdf, page5 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+ <use Appendixes.pdf, page 5>
+Package pdftex.def Info: Appendixes.pdf, page5 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 5>
+Package pdftex.def Info: Appendixes.pdf, page5 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [16 <C:/GitHub/TriangleProblem/report/Appendixes.pdf>] <Appendixes.pdf, id=105
+, page=6, 597.23125pt x 845.1575pt>
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 6>
+Package pdftex.def Info: Appendixes.pdf, page6 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+ <use Appendixes.pdf, page 6>
+Package pdftex.def Info: Appendixes.pdf, page6 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 6>
+Package pdftex.def Info: Appendixes.pdf, page6 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [17 <C:/GitHub/TriangleProblem/report/Appendixes.pdf>] <Appendixes.pdf, id=109
+, page=7, 597.23125pt x 845.1575pt>
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 7>
+Package pdftex.def Info: Appendixes.pdf, page7 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+ <use Appendixes.pdf, page 7>
+Package pdftex.def Info: Appendixes.pdf, page7 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 7>
+Package pdftex.def Info: Appendixes.pdf, page7 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [18 <C:/GitHub/TriangleProblem/report/Appendixes.pdf>] <Appendixes.pdf, id=113
+, page=8, 597.23125pt x 845.1575pt>
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 8>
+Package pdftex.def Info: Appendixes.pdf, page8 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+ <use Appendixes.pdf, page 8>
+Package pdftex.def Info: Appendixes.pdf, page8 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: Appendixes.pdf Graphic file (type pdf)
+
+<use Appendixes.pdf, page 8>
+Package pdftex.def Info: Appendixes.pdf, page8 used on input line 76.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [19 <C:/GitHub/TriangleProblem/report/Appendixes.pdf>] (C:\GitHub\TriangleProb
+lem\report\report.aux) ) 
 Here is how much of TeX's memory you used:
- 6476 strings out of 493921
- 94824 string characters out of 3147279
- 169530 words of memory out of 3000000
- 9664 multiletter control sequences out of 15000+200000
+ 7614 strings out of 493921
+ 111545 string characters out of 3147279
+ 194092 words of memory out of 3000000
+ 10778 multiletter control sequences out of 15000+200000
  12751 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,13n,43p,1060b,647s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.p
-fb>
-Output written on report.pdf (10 pages, 565889 bytes).
+ 44i,18n,43p,1064b,647s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
+x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (19 pages, 706066 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 162 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
