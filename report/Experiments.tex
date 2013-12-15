@@ -2,13 +2,34 @@
 \section{Experiments}
 
 
-Some experiments were conducted to verify the correctness of the algorithm and its running time. The results were compared with the "naive" approach - a brute force algorithm that checks any possible combinations. 
+Some experiments were conducted to verify the correctness of the algorithm and its running time. The results were computed for both algorithm: "Misra-Grise"  and "Our approach".\\
 
+Table columns description:
+ 
+\begin{itemize}
+  \item IMDB IS (IMDB Input Size) - size of subset means that this is segment number 0 out of 2
+  \item RN (Roles number) - total number of roles, each role desribes two actors that played together in the same movie
+  \item BDST (Building Data Structure Time) - time required to build data structure (graph)
+  \item ART (Algorithm Running Time) - running time of tested algorithm
+  \item RT (Result Triplet) - three actors that played tgother in bigest amount of movies
+  \item RM (Result Movies) - Number of movies that triplet have been ivovled in
+\end{itemize}
+
+Resuts for Misra-Gris algrithm:
+
+\begin{table}[h]
+\begin{tabular}{|p{2.5cm}|l|p{1.9cm}|p{1.5cm}|p{4.3cm}|l|}
+\hline
+IMDB IS          & RN & BDST  & ART & RT                    & RM  \\ \hline
+100\%            &       48 967 421      & 0 h         & 38.6 h       & \{760909, 406612, 80307\}  & 15  \\ \hline
+\end{tabular}
+\end{table}
+
+Results for our algorithm:
 \begin{table}[h]
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
-IMDB IS          & Roles size & Bulding DS  & Algorithm RT & Result                     & RM  \\ \hline
-100\%            &            & 0 h         & 38.6 h       & \{760909, 406612, 80307\}  & 15  \\ \hline
+IMDB IS          & RN & BDST  & ART & RT                     & RM  \\ \hline
 100\%            & 48 967 421 & 393.409 sec & 8.282 sec    & \{150878, 215408, 215564\} & 130 \\ \hline
 50\% (seg-0\_2)  & 24 434 967 & 200.750 sec & 4.795 sec    & \{150878, 215408, 215564\} & 130 \\ \hline
 50\% (seg-1\_2)  & 24 532 454 & 196.157 sec & 3.356 sec    & \{157955, 651761, 329494\} & 101 \\ \hline
@@ -20,3 +41,11 @@ IMDB IS          & Roles size & Bulding DS  & Algorithm RT & Result             
 1\% (seg-0\_100) & 489 009    & 4.242 sec   & 0.183 sec    & \{33500, 316918, 761020\}  & 84  \\ \hline
 \end{tabular}
 \end{table}
+
+All the test have been run on the same machine. Environment specification:
+
+\begin{description}
+  \item[Processor] Intel Core i7-2760QM 2.20 GHz
+  \item[Memory] 8GB, 1,333MHz DDR3
+  \item[Hard drive] 1TB, 5,400rpm
+\end{description}
