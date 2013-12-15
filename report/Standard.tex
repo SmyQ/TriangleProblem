@@ -1,27 +1,44 @@
 \label{Standard}
 \section{Standard approach}
 
-We firstly started with implementing data streaming technique. Since our goal is to find heavy hitters, we chose Misra-Gries algorithm to save space and to process fast large amount fo data.
+Firstly we started with implementing one of data streaming technique. Since our goal is to find heavy hitters, we chose Misra-Gries algorithm to save space and to process fast large amount of data.
 
 \label{MisraGries}
 \subsection{Pseudocode}
-The idea of the algorithm is to process data movie by movie. Each movie has a list of actors and while processing them we create triplets for each movie. Then we simply count triplets by adding them to the cache table.
+The idea of our verstion of Misra-Gries is to process data movie by movie. Each movie has a list of actors and while processing them we analyze all triplets for each movie. Then we mainatin a hash table which contains pairs of triplets and their count indicating relative count of occurences of the triplet. We add a triplet to the table if it does not appear there yet or we increment count of analyzed triplet. The result of the analysis is the triplet with the highest count. For more details we present pseudocode of the algorithm in paragraph below.
 \\
-Let m denote number of movies..
-
+Let m denote number of movies and A(i) denotes list of actors playing in a given movie i. 
+Let H be a hash table containing a k pairs: triplet (t) and its count (\(count_t)\).
 \begin{verbatim}
 Algorithm 1: MisraGries()
-2	{a1,a2,a3};
-3	FOREACH movie DO
-4	  FOR i ← 0 to size of A(movie) DO
-7	      FOR j ← i + 1 to size of A(movie) DO
-5		  FOR k ← j + 1 to size of A(movie) DO	          
-16	      END FOR
-17	    END IF
-18	  END FOR
-19	END FOREACH
-20	RETURN moviesCount, {a1,a2,a3};	  	                    	  
+1	FOREACH movie DO
+2	  FOR i ← 0 to size of A(movie) DO
+3	    FOR j ← i + 1 to size of A(movie) DO
+4	      FOR k ← j + 1 to size of A(movie) DO
+5	        IF {A(movie)[i],A(movie)[j],A(movie)[k]} ∈ H THEN
+6	          count[t] += 1;
+7	        ELSE
+8	          INSERT({A(movie)[i],A(movie)[j],A(movie)[k]}, count);  
+9	        END IF
+10	       IF H.length > k THEN
+11	       FOREACH t IN H DO
+12	         count[t] -= 1;
+13	          IF count[t] = 0 THEN
+14	            H.REMOVE(t);
+15	          END IF
+16	        END FOREACH
+17	      END IF      
+18	    END FOR
+19	  END FOR
+20	 END FOR
+21	END FOREACH
+22	RETURN H.MAX(count);	  	                    	  
 \end{verbatim}
+
+The algorithm allows to save memory usage since we do not store all the processed data. The efficiency of the algorithm and its running time highly depend on the size of the hash table. The bigger it is, the slower algorithm computes and the more memory space we use. On the other hand hash table implies randomization, so with bigger table, we can receive more reliable results than with smaller one.
+\\
+We chose size of the hash table by making computations and running experiments. We counted that with IMDB database we have almost 2 billions triplets for all the movies. For our experiments we decided to have set the size of the table to be equal to 20000 which is 0.001% of the whole set and gives reasonable results.
 
 \label{AnalysisMisraGries}
 \subsection{Analysis}
+Memory usage in Misra-Gries algorithm is very little, the space is needed only for the hash table. Complexity of the algorithm highly depends on the size of hash table and on the size of dataset to be processed. The higher they are, the longer computation time is needed. The complexity of the algorithm is \(\sum\limits_{i=1}^m{a_i \choose 3}*k\) where k is size of the hash table. We can reduce it to \(\sum\limits_{i=1}^m{a_i^3}*k\).
