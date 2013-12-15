@@ -1,13 +1,13 @@
 \section{Standard approach}
 \label{Standard}
 
-Firstly we started with implementing a data streaming technique. Since our goal is to find heavy hitters, we chose Misra-Gries algorithm to save space and to process fast large amount of data.
+We started with implementing a data streaming technique. Since our goal is to find heavy hitters, we chose Misra-Gries algorithm to save space and to process large amount of data fast.
 
 \subsection{Pseudocode}
 \label{MisraGries}
 The idea of our version of Misra-Gries is to process data movie by movie. Each movie has a list of actors and while processing them we generate all triplets for each movie. Then we maintain a hash table which contains pairs of triplets and their respective count indicating relative number of occurences of the triplet. We add a triplet to the table if it does not appear there yet or we increment count of analyzed triplet. The result of the analysis is the triplet with the highest count. For more details we present pseudocode of the algorithm in paragraph below.
 \\
-Let m denote number of movies and A(i) denotes list of actors playing in a given movie i. 
+Let m denote number of movies and A(i) denotes list of actors playing in a given movie i.
 Let H be a hash table containing k pairs: triplet (t) and its count (\(count_t)\).
 \begin{verbatim}
 Algorithm 1: MisraGries()
@@ -35,9 +35,9 @@ Algorithm 1: MisraGries()
 22	RETURN H.MAX(count);	  	                    	  
 \end{verbatim}
 
-The algorithm allows to save memory since we do not store all the processed data. The efficiency of the algorithm and its running time highly depend on the size of the hash table. The bigger it is, the slower algorithm computes and the more memory space we use. On the other hand with bigger table, we can work with bigger sample, which would result in more reliable results.
+The algorithm allows to save memory since not store all processed data is stored. The efficiency and its running time highly depend on the cache size. The bigger it is, the slower algorithm computes and the more memory space we use. On the other hand with bigger table, we can work with bigger sample, which would result in an approximation that is closer to the actual answer.
 \\
-We chose size of the hash table by making computations and running experiments. We estimated that with IMDB database we have nearly 2 billion triplets for all the movies. We ran multiple expreiments with different chache sizes, and the number we found most acceptable in terms of running times was 20 000. This represents 0.001\% of the whole set. While the sample is relatively small, the running time with any bigger chache size would have been unacceptable. More on the running times in section \ref{Experiments}
+The cache size was determined based on calculations and experiments. We estimated that with IMDB database we have nearly 2 billion triplets for all the movies. We ran multiple expreiments with different cache sizes, and the number we found most acceptable in terms of running times was 20 000 triplets. This represents 0.001\% of the whole set. While the sample is relatively small, the running time with any bigger cache size would have been unacceptable. More on the running times in section \ref{Experiments}
 \\
 \subsection{Analysis}
 \label{AnalysisMisraGries}
