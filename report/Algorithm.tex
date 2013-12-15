@@ -91,6 +91,7 @@ Algorithm 3: CommonMovieSubsetCount(movies1, movies2)
 14	RETURN count;
 \end{verbatim}
 
+\label{Parallelism}
 \subsection{Parallelism}
 Since the IMDB database is enormous and building graph for such an amount of data, requires lots of RAM, we wanted to split the problem and make computations on separate parts in parallel. We took care of not loosing any data and not processing any data more times than once. The other important thing was to split data into parts that require the same amount of work for CPU.
 \\
@@ -98,7 +99,7 @@ Each separate group contains specific number of actors and edges coming out from
 \\
 For instance if we want to have ten groups, to split data evenly in each group, we just picked every 10th vertex (actor) from the sorted list we have. That guaranties that workload on every part of data is similar, since each vertex has less and less edges coming out from it.
 \\
-We claim that we have no repetition of processing data. It is shown on the drawing \ref{triple}.
+We claim that we do not process same data multiple times. It is shown on the drawing \ref{triple}.
 
 \begin{figure}[ht!]
 \centering
