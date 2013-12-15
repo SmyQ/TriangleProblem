@@ -124,11 +124,13 @@ We can run parallel computations on the same machine or on the separate machines
 By not opting for an implementation of a traditional triangles counting (O(\(n^3\))), we avoided to examine the same vertex three times. To do so, we constructed a special data structure and by consolidating edges, we save space.
 In the worst case scenario, when each actor played together with another one (it is not realistic situation though) we will have n vertices and n*(n - 1)/2 edges.
 \\
+There are two phases of the algorithm and we start with building a graph. A running time for it is: \(\sum\limits_{i=1}^m{m_i * d_{mi}}\) where \(m_i\) is a number of movies that i-th actor was playing and \(d_{mi}\) is a number of actors playing in \(m_i\)-th movie. It results in O(\(n*m_{max}*d_{max}\)).
+\\
 Complexity of the algorithm highly depends on the degree of vertices. The higher it is, the longer computation time is required. It is related to the process of looking for subsets of size two for each vertex. The running time of the algorithm is \(\sum\limits_{i=1}^n{k_i \choose 2}\) where \(k_i\) is size of A(\(v_i)\), v \(\in\) V. The complexity of the algorithm counted in the worst case is presented below. The worst case scenario is when the input is a full graph (all actors in the database played together).
 \\
 t(n,k) = \(\sum\limits_{i=1}^n{k_i \choose 2}\) \(\approx\) \(\sum\limits_{i=1}^n{k_i^2}\) \(\approx\) \(n*k_{max}^2\) \(\approx\) \(n*(n-1)^2\) = O(\(n^3\))
 \\
-Comparing our approach to Misra-Gries algorithm presented in chapter \ref{Standard}, we can see that the complexity of our algorithm is lower. We present differences in computation time in table \ref{comparison}. The values are counted for the worst case scenario, meaning the worst value we found in dataset. Let a be a constant and equals to 1274, that denotes the highest amount of actors played in a movie. Let k be a constant and equals to 15845. It is the highest number of adjacent vertices a vertex had found in database. Number of movies in IMDB equals to 388126 and number of actors equals to 817718. 
+Comparing our approach to Misra-Gries algorithm presented in chapter \ref{Standard}, we can see that the complexity of our algorithm is lower. We present differences in computation time in table \ref{comparison}. The values are counted for the worst case scenario, meaning the worst value we found in dataset. Let a be a constant number and equal to 1274 indicating the highest amount of actors played in a movie. Let k be a constant number and equal to 15845 denoting the highest number of adjacent vertices a vertex had found in database. Let d be a constant number and equal to 909 indicating the highest number of movies that an actor played in. Number of movies in IMDB equals to 388126 and number of actors equals to 817718. For calculating running time of our approach we added running times of building a graph and making computations.
 \begin{table}[ht]
 \caption{Comparison of running times of Misra-Gries algorithm and our approach for the worst case scenario}
 \centering
@@ -137,11 +139,11 @@ Comparing our approach to Misra-Gries algorithm presented in chapter \ref{Standa
 Method & Running Time & Value \\ [0.5ex]
 \hline
 Misra-Gries&\(\sum\limits_{i=1}^m{a_i \choose 3}*h\)&\(4.805*e^{15} * h\)\\
-Our approach&\(\sum\limits_{i=1}^n{k_i \choose 2}\)&\(4.106*e^{14}\)\\
+Our approach&\(\sum\limits_{i=1}^m{m_i * d_{mi}}\)+\(\sum\limits_{i=1}^n{k_i \choose 2}\)&\(4.116*e^{14}\)\\
 \hline
 \end{tabular}
 \label{comparison}
 \end{table}
-The values obtained show that our approach has smaller time complexity than Misra-Gries. For the worst case scenario it is 10*h times.
+The values obtained show that our approach has smaller time complexity than Misra-Gries. For the worst case scenario it is approximately 10*h times.
 \\
 For the parallel approach, the running time is \(\sum\limits_{i=1}^n{k_i \choose 2}/x\) where x is number of threads and assuming that all the threads run simultanously. We ignore the time needed for aggregation after computing all the threads, since it is relatively small number.
