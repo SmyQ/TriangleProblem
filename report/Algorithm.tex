@@ -18,10 +18,10 @@ SET(e) is the set of (two) vertices adjacent to an edge e.
 
 Unique(\(v_1, v_2,... v_n)\) - returns a set of unique elements.
 
-MovieCount denotes the biggest number found so far of common movies between any given three actors.
+MovieCount denotes the biggest number of common movies between any given three actors, found so far.
 
 \subsection{Data structure}
-As mentioned in the previous section, the algorithm starts by first building the data structure. The data structure is a graph, where vertices represent actors and edges between them represent the movie(s) these actors played together in. 
+As mentioned in the previous section, the algorithm starts by first building the data structure. It is a graph, where vertices represent actors and edges between them represent the movie(s) these actors played together in. 
 
 \begin{figure}[ht!]
 \centering
@@ -30,19 +30,17 @@ As mentioned in the previous section, the algorithm starts by first building the
 \label{example}
 \end{figure}
 
-Figure \ref{example} represents the data structure. To clearly illustrate the problem, the picture above represents a multi-graph, i.e. there can be multiple edges between two vertices. This is not the case of the actual data structure, however, as multiple edges are collapsed into a single one, where the weight is the sum of the weights of the original edges. The weight of an edge is the initially 1 - a single movie common to two actors (vertices). The edge contains sorted list of the movies common for two actors adjacent to the specific edge.
+To clearly illustrate the problem, figure \ref{example} represents a multi-graph, i.e. there can be multiple edges between two vertices. This is not the case of the actual data structure, however, as multiple edges are collapsed into a single one, where the weight is the sum of the weights of the original edges. The weight of an edge is initially 1 - a single movie common to two actors (vertices). The edge contains sorted list of the movies common to two actors adjacent that edge.
 \\
 After the structure is constructed, the actual data processing takes place.
 
 
 \subsection{Pseudocode}
-Main algorithm we implemented is FindThreeActors. After constructing the graph, we iterate over all vertices (actors). We find for each vertex all subsets of size of two of the set of adjacent edges to that vertex. We take an advantage of the fact that if an actor 1 played together in the same movie "A" with an actor 2 and the actor 1 played together with an actor 3 in the movie "A", that means that the actor 2 and the actor 3 had to play together in the movie "A". So we decided not to look for triangles in traditional way, but we look for pairs of edges having movies in common being adjacent to a specific vertex.
+Main algorithm we implemented is FindThreeActors. After constructing the graph, we iterate over all vertices (actors). For each vertex we generate all subsets of size two of the its adjacent edges. We take an advantage of the fact that if an actor 1 played together in the same movie "A" with an actor 2 and the actor 1 played together with an actor 3 in the movie "A", that means that the actor 2 and the actor 3 had to play together in the movie "A". This allows us not to look for triangles in traditional way. Instead, we look for pairs of edges, adjacent to a vertex, that have common movies.
 \\
-We examine each pair of edges and we find the number of common movies that actors played in together (this is a common set of the subsets - the movies from two edges).  We do that only if minimal weight of edges is higher than found (by now) maximum number of movies that actors played together. 
+We examine each pair of edges and we find the number of common movies that actors played together in. This is the intersection of the two subsets. Another optimisation can be applied here. The intersections, whose size is less than the max size found so far, can be ignored.
 \\
-If the solution is better that the already found, we save it. We continue searching and at the end, we remove any references to the adjacent edges to the analysed vertex. This will make future iterations faster, since less edges need to be examined. We go to the next iteration. 
-\\
-Pseudocode for the algorithm is presented below:
+The operations described so far are summarized in the pseudocode below:
 
 \begin{verbatim}
 Algorithm 2: FindThreeActors(graph)
@@ -93,24 +91,24 @@ Algorithm 3: CommonMovieSubsetCount(movies1, movies2)
 
 \subsection{Parallelism}
 \label{Parallelism}
-Since the IMDB database is enormous and building graph for such an amount of data, requires lots of RAM, we wanted to split the problem and make computations on separate parts in parallel. We took care of not loosing any data and not processing any data more times than once. The other important thing was to split data into parts that require the same amount of work for CPU.
+Because of the fact the data set is huge, building graph for such an amount of data requires lots of memory. This introduced the need to split the data and make computations on separate parts in parallel. We took care of not losing any data and not processing any records multiple times.
 \\
-Each separate group contains specific number of actors and edges coming out from them. The division is done by creating a list of edges (an edge contains 2 actors and a movie these 2 actors played together), where there is no repetition of edges (an edge is always directed from an actor with higher Id to an actor with lower Id). We sorted the list according to the Id of the first actor (in this actor with lower Id in an edge). We noticed that since an edge goes to the actor with higher Id, vertices with lower Ids have much more edges going out from it than getting in, so we could not just picked the first x actors from the list. 
+Each separate group contains specific number of actors and outgoing edges. The division is done by creating a list of edges (an edge contains 2 actors and a movie these 2 actors played together), where there is no repetition of edges - an edge is always directed from an actor with higher Id to an actor with lower Id. We sorted the list by the Id of the first actor (in this actor with lower Id in an edge). We noticed that since an edge is incoming to the actor with higher Id, vertices with lower Ids have much more outgoing than incoming edges. So in order to have an even separation of computation, we couldn't just pick a contigious collection of vertices for a specific group.
 \\
-For instance if we want to have ten groups, to split data evenly in each group, we just picked every 10th vertex (actor) from the sorted list we have. That guaranties that workload on every part of data is similar, since each vertex has less and less edges coming out from it.
+For instance if we want to have ten groups, to split data evenly in each group, we just picked every tenth vertex (actor) from the sorted list we have. That guaranties that workload on every part of data is similar, since each vertex has less and less outgoing edges.
 \\
-We claim that we do not process same data multiple times. It is shown on the drawing \ref{triple}.
+We claim that we do not process same data multiple times. It is shown on figure \ref{triplet}.
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=90mm]{resources/triple.png}
-\caption{Vertex Triple}
-\label{triple}
+\includegraphics[width=90mm]{resources/triplet.png}
+\caption{Vertex Triplet}
+\label{triplet}
 \end{figure}
 
-All three vertices are connected to each other and are placed in three different groups (red, blue and green). In group red we have a vertex A and two outgoing edges. In blue group we have a vertex B and one outgoing edge. In group green we have only vertex C without any outgoing edges. We can see that the presented triple will be analysed only once when we will process the vertex A in group red.
+All three vertices are connected to each other and are placed in three different groups (red, blue and green). In group red we have a vertex A and two outgoing edges. In blue group we have a vertex B and one outgoing edge. In the green group we have only vertex C without any outgoing edges. We can see that the presented triple will be analysed only once when we will process the vertex A in group red.
 \\
-The presented division allows us to run computations in parallel. Each thread results in a triple and number of movies actors played together in. After finishing computing all the data, we just need to aggregate the results and find the triple that played in the most number of movies. The figure \ref{threads} models the aggregation done by process 0 of the work produced by processes from 1 to n. In our case depth is 1 and work is n.
+The presented division allows us to run computations in parallel. Each thread results in a triple and number of movies actors played together in. After finishing computing all the data, we just need to aggregate the results and find the triple that played in the most number of movies. Figure \ref{threads} models the aggregation of the work produced by processes from 1 to n. In our case depth is 1 and work is n.
 
 
 \begin{figure}[ht!]
@@ -123,10 +121,10 @@ The presented division allows us to run computations in parallel. Each thread re
 We can run parallel computations on the same machine or on the separate machines. When we want to run it on the same machine, we have to consider amount of RAM the machine has and amount of parallel processes we can run on it.
 
 \subsection{Analysis}
-By not choosing to implement a traditional triangles counting O(\(n^3\)), we avoided to examine three times the same vertex. To do so, we constructed a special data structure and by consolidating edges, we saved used space to save the data.
+By not opting for an implementation of a traditional triangles counting (O(\(n^3\))), we avoided to examine the same vertex three times. To do so, we constructed a special data structure and by consolidating edges, we save space.
 In the worst case scenario, when each actor played together with another one (it is not realistic situation though) we will have n vertices and n*(n - 1)/2 edges.
 \\
-Complexity of the algorithm highly depends on degree of vertices. The higher it is, the longer computation time is required. It is related to the process of looking for subsets of size two for each vertex. The running time of the algorithm is \(\sum\limits_{i=1}^n{k_i \choose 2}\) where \(k_i\) is size of A(\(v_i)\), v \(\in\) V. The complexity of the algorithm counted for the worst case is calculated below. The worst case scenario is when an input for our algorithm is a full graph (all actors in the database played together).
+Complexity of the algorithm highly depends on the degree of vertices. The higher it is, the longer computation time is required. It is related to the process of looking for subsets of size two for each vertex. The running time of the algorithm is \(\sum\limits_{i=1}^n{k_i \choose 2}\) where \(k_i\) is size of A(\(v_i)\), v \(\in\) V. The complexity of the algorithm counted in the worst case is presented below. The worst case scenario is when the input is a full graph (all actors in the database played together).
 \\
 t(n,k) = \(\sum\limits_{i=1}^n{k_i \choose 2}\) \(\approx\) \(\sum\limits_{i=1}^n{k_i^2}\) \(\approx\) \(n*k_{max}^2\) \(\approx\) \(n*(n-1)^2\) = O(\(n^3\))
 \\
