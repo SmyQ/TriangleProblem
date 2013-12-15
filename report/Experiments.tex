@@ -2,7 +2,8 @@
 \section{Experiments}
 
 
-Some experiments were conducted to verify the correctness of the algorithm and its running time. The results were computed for both algorithm: "Misra-Grise"  and "Our approach".\\
+Some experiments were conducted to verify the correctness of the algorithm and its running time. The results were computed for both algorithms: Misra-Gries and our algorithm.
+\\
 
 Table columns description:
  
@@ -15,31 +16,38 @@ Table columns description:
   \item RM (Result Movies) - Number of movies that triplet have been ivovled in
 \end{itemize}
 
-Resuts for Misra-Gris algrithm:
-
-\begin{table}[h]
-\begin{tabular}{|p{2.5cm}|l|p{1.9cm}|p{1.5cm}|p{4.3cm}|l|}
+\begin{table}[ht]
+\caption{Resuts for Misra-Gries algorithm}
+\centering
+\begin{tabular}{c c c c c}
+\hline\hline
+IMDB IS&RN&BDST&ART&RT\\ [0.5ex]
 \hline
-IMDB IS          & RN & BDST  & ART & RT                    & RM  \\ \hline
-100\%            &       48 967 421      & 0 h         & 38.6 h       & \{760909, 406612, 80307\}  & 15  \\ \hline
+100\%&48 967 421&0 h&38.6 h&\{760909, 406612, 80307\} \\
+\hline
 \end{tabular}
+\label{resMisraGries}
 \end{table}
 
-Results for our algorithm:
-\begin{table}[h]
-\begin{tabular}{|l|l|l|l|l|l|}
+\begin{table}[ht]
+\caption{Resuts for our algorithm}
+\centering
+\begin{tabular}{c c c c c c}
+\hline\hline
+IMDB IS&RN&BDST&ART&RT&RM\\ [0.5ex]
 \hline
-IMDB IS          & RN & BDST  & ART & RT                     & RM  \\ \hline
-100\%            & 48 967 421 & 393.409 sec & 8.282 sec    & \{150878, 215408, 215564\} & 130 \\ \hline
-50\% (seg-0\_2)  & 24 434 967 & 200.750 sec & 4.795 sec    & \{150878, 215408, 215564\} & 130 \\ \hline
-50\% (seg-1\_2)  & 24 532 454 & 196.157 sec & 3.356 sec    & \{157955, 651761, 329494\} & 101 \\ \hline
-25\% (seg-0\_4)  & 12 339 915 & 98.711 sec  & 2.142 sec    & \{33500, 316918, 761020\}  & 84  \\ \hline
-25\% (seg-1\_4)  & 12 273 033 & 98.430 sec  & 2.095 sec    & \{41669, 341023, 338852\}  & 94  \\ \hline
-25\% (seg-2\_4)  & 12 101 052 & 95.708 sec  & 2.150 sec    & \{150878, 215408, 215564\} & 130 \\ \hline
-25\% (seg-3\_4)  & 12 259 421 & 97.868 sec  & 2.061 sec    & \{157955, 651761, 329494\} & 101 \\ \hline
-10\% (seg-0\_10) & 4 899 811  & 39.729 sec  & 1.225 sec    & \{33500, 316918, 761020\}  & 84  \\ \hline
-1\% (seg-0\_100) & 489 009    & 4.242 sec   & 0.183 sec    & \{33500, 316918, 761020\}  & 84  \\ \hline
+100\%&48 967 421&393.409 sec&8.282 sec&\{150878, 215408, 215564\}&130\\
+50\% (seg-0\_2)& 24 434 967 & 200.750 sec & 4.795 sec    & \{150878, 215408, 215564\} & 130 \\
+50\% (seg-1\_2)  & 24 532 454 & 196.157 sec & 3.356 sec    & \{157955, 651761, 329494\} & 101 \\
+25\% (seg-0\_4)  & 12 339 915 & 98.711 sec  & 2.142 sec    & \{33500, 316918, 761020\}  & 84  \\
+25\% (seg-1\_4)  & 12 273 033 & 98.430 sec  & 2.095 sec    & \{41669, 341023, 338852\}  & 94  \\
+25\% (seg-2\_4)  & 12 101 052 & 95.708 sec  & 2.150 sec    & \{150878, 215408, 215564\} & 130 \\
+25\% (seg-3\_4)  & 12 259 421 & 97.868 sec  & 2.061 sec    & \{157955, 651761, 329494\} & 101 \\
+10\% (seg-0\_10) & 4 899 811  & 39.729 sec  & 1.225 sec    & \{33500, 316918, 761020\}  & 84  \\
+1\% (seg-0\_100) & 489 009    & 4.242 sec   & 0.183 sec    & \{33500, 316918, 761020\}  & 84  \\
+\hline
 \end{tabular}
+\label{results}
 \end{table}
 
 All the test have been run on the same machine. Environment specification:
