@@ -1,5 +1,6 @@
-\label{Experiments}
+
 \section{Experiments}
+\label{Experiments}
 
 
 Some experiments were conducted to verify the correctness of the algorithm and its running time. The results were computed for both algorithms: Misra-Gries and our algorithm.
@@ -11,6 +12,7 @@ The experiments were run on the same machine. Environment specification:
   \item[Hard drive] 1TB, 5,400rpm
 \end{description}
 
+\subsection{Results for Misra-Gries}
 \begin{table}[ht]
 \caption{Results for Misra-Gries algorithm}
 \centering
@@ -29,6 +31,7 @@ The experiments were run on the same machine. Environment specification:
 
 As predicted in section \ref{AnalysisMisraGries}, the running time of Misra-Gries in our setup was expected to be long. The results in table \ref{resMisraGries} support this. The long running time comes from the fact that there are movies with a large number of actors. For these, the algorithm computes all possible triplets combinations. Furthermore, the bigger the cache, the longer the running times. The above experiments were performed with a chache size 20 000 triplets. More about the chache size in section \ref{MisraGries}
 
+\subsection{Results for our algorithm}
 \begin{table}[ht]
 \caption{Results for our algorithm}
 \centering
