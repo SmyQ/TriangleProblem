@@ -121,6 +121,7 @@ The presented division allows us to run computations in parallel. Each thread re
 We can run parallel computations on the same machine or on the separate machines. When we want to run it on the same machine, we have to consider amount of RAM the machine has and amount of parallel processes we can run on it.
 
 \subsection{Analysis}
+\label{OurAlgorithmAnalysis}
 By not opting for an implementation of a traditional triangles counting (O(\(n^3\))), we avoided to examine the same vertex three times. To do so, we constructed a special data structure and by consolidating edges, we save space.
 In the worst case scenario, when each actor played together with another one (it is not realistic situation though) we will have n vertices and n*(n - 1)/2 edges.
 \\
