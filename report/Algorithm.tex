@@ -96,11 +96,28 @@ Since the IMDB database is enormous and building graph for such an amount of dat
 \\
 Each separate group contains specific number of actors and edges coming out from them. The division is done by creating a list of edges (an edge contains 2 actors and a movie these 2 actors played together), where there is no repetition of edges (an edge is always directed from an actor with higher Id to an actor with lower Id). We sorted the list according to the Id of the first actor (in this actor with lower Id in an edge). We noticed that since an edge goes to the actor with higher Id, vertices with lower Ids have much more edges going out from it than getting in, so we could not just picked the first x actors from the list. To split data evenly, we just picked every ???? actor from the sorted list we have. That guaranties that workload on every part of data is similar.
 \\
-We claim that we have no repetition of processing data. It is shown on the picture below....
-All three vertices are connected to each other and we put them in three different groups (red, blue and green). In group red we have a vertex A and two edges coming out from this vertex. In blue group we have a vertex B and one edge coming out from it. In group green we have only vertex C without any edges. We can see that the presented triple will be analysed only once when we will process the vertex A in group red.
+We claim that we have no repetition of processing data. It is shown on the picture below:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{resources/triple.png}
+\caption{Vertex Triple}
+\label{example}
+\end{figure}
+
+All three vertices are connected to each other and are placed in three different groups (red, blue and green). In group red we have a vertex A and two outgoing edges. In blue group we have a vertex B and one outgoing edge. In group green we have only vertex C without any outgoing edges. We can see that the presented triple will be analysed only once when we will process the vertex A in group red.
 \\
-The presented division allows us to run computations in parallel. Each thread results in a triplet and number of movies actors played together. After finishing computing all the data, we just need to aggregate the results and find the triplet that played in the most number of movies. The picture !!!!!
-\\
+The presented division allows us to run computations in parallel. Each thread results in a triple and number of movies actors played together in. After finishing computing all the data, we just need to aggregate the results and find the triple that played in the most number of movies.
+
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{resources/threads.png}
+\caption{Threads Work Aggregation}
+\label{example}
+\end{figure}
+
+The figure above models the aggregation done by process 0 of the work produced by processes from 1 to n.
 
 \subsection{Analysis}
 By not choosing to implement a traditional triangles counting, we avoided to examine three times the same triple of the actors and the number of their common movies they played in. To be able to avoid this, we constructed a special data structure and by consolidating edges, we saved used space to save the data.
