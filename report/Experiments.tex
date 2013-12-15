@@ -12,7 +12,7 @@ The experiments were run on the same machine. Environment specification:
 \end{description}
 
 \begin{table}[ht]
-\caption{Resuts for Misra-Gries algorithm}
+\caption{Results for Misra-Gries algorithm}
 \centering
 \begin{tabular}{c c c c c}
 \hline\hline
@@ -30,7 +30,7 @@ The experiments were run on the same machine. Environment specification:
 As predicted in section \ref{AnalysisMisraGries}, the running time of Misra-Gries in our setup was expected to be long. The results in table \ref{resMisraGries} support this. The long running time comes from the fact that there are movies with a large number of actors. For these, the algorithm computes all possible triplets combinations. Furthermore, the bigger the cache, the longer the running times. The above experiments were performed with a chache size 20 000 triplets. More about the chache size in section \ref{MisraGries}
 
 \begin{table}[ht]
-\caption{Resuts for our algorithm}
+\caption{Results for our algorithm}
 \centering
 \begin{tabular}{c c c c c c}
 \hline\hline
@@ -63,7 +63,7 @@ As predicted in section \ref{AnalysisMisraGries}, the running time of Misra-Grie
 \end{figure}
 
 
-The analisys made in section \ref{OurAlgorithmAnalysis} predicted, the worts case running time is O(\(n^3\)). As can be seen in table \ref{results}, the running times are obviously within the bounds. Meaning that doubling the problem size increases the computational time with a factor of less than 3.
+The analysis made in section \ref{OurAlgorithmAnalysis} predicted, the worts case running time is O(\(n^3\)). As can be seen in table \ref{results}, the running times are obviously within the bounds. Meaning that doubling the problem size increases the computational time with a factor of less than 3.
 
 \subsection{Parallelism}
 \label{ExperimentsParallelism}
@@ -72,7 +72,7 @@ We ran our experiments on an 8-core machine, which allows for a maximum of 8 thr
 
 
 \begin{table}[ht]
-\caption{Resuts for Parallel Execution}
+\caption{Results for Parallel Execution}
 \centering
 \begin{tabular}{c c}
 \hline\hline
