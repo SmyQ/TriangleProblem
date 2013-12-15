@@ -69,7 +69,7 @@ Algorithm 2: FindThreeActors(graph)
 \end{verbatim}
 
 
-We designed CommonMovieSubsetCount that returns number of items that are common in 2 subset given as arguments. We take advantage of the fact that the lists are sorted and we iterate over all the items in both list in linear time. 
+We designed CommonMovieSubsetCount that returns number of items that are common in 2 subset given as arguments. We take advantage of the fact that the lists are sorted and we iterate over all the items in both lists in linear time. 
 \\
 The pseudocode is present below:
 
@@ -94,30 +94,32 @@ Algorithm 3: CommonMovieSubsetCount(movies1, movies2)
 \subsection{Parallelism}
 Since the IMDB database is enormous and building graph for such an amount of data, requires lots of RAM, we wanted to split the problem and make computations on separate parts in parallel. We took care of not loosing any data and not processing any data more times than once. The other important thing was to split data into parts that require the same amount of work for CPU.
 \\
-Each separate group contains specific number of actors and edges coming out from them. The division is done by creating a list of edges (an edge contains 2 actors and a movie these 2 actors played together), where there is no repetition of edges (an edge is always directed from an actor with higher Id to an actor with lower Id). We sorted the list according to the Id of the first actor (in this actor with lower Id in an edge). We noticed that since an edge goes to the actor with higher Id, vertices with lower Ids have much more edges going out from it than getting in, so we could not just picked the first x actors from the list. To split data evenly, we just picked every ???? actor from the sorted list we have. That guaranties that workload on every part of data is similar.
+Each separate group contains specific number of actors and edges coming out from them. The division is done by creating a list of edges (an edge contains 2 actors and a movie these 2 actors played together), where there is no repetition of edges (an edge is always directed from an actor with higher Id to an actor with lower Id). We sorted the list according to the Id of the first actor (in this actor with lower Id in an edge). We noticed that since an edge goes to the actor with higher Id, vertices with lower Ids have much more edges going out from it than getting in, so we could not just picked the first x actors from the list. 
 \\
-We claim that we have no repetition of processing data. It is shown on the picture below:
+For instance if we want to have ten groups, to split data evenly in each group, we just picked every 10th vertex (actor) from the sorted list we have. That guaranties that workload on every part of data is similar, since each vertex has less and less edges coming out from it.
+\\
+We claim that we have no repetition of processing data. It is shown on the drawing \ref{triple}.
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{resources/triple.png}
 \caption{Vertex Triple}
-\label{example}
+\label{triple}
 \end{figure}
 
 All three vertices are connected to each other and are placed in three different groups (red, blue and green). In group red we have a vertex A and two outgoing edges. In blue group we have a vertex B and one outgoing edge. In group green we have only vertex C without any outgoing edges. We can see that the presented triple will be analysed only once when we will process the vertex A in group red.
 \\
-The presented division allows us to run computations in parallel. Each thread results in a triple and number of movies actors played together in. After finishing computing all the data, we just need to aggregate the results and find the triple that played in the most number of movies.
+The presented division allows us to run computations in parallel. Each thread results in a triple and number of movies actors played together in. After finishing computing all the data, we just need to aggregate the results and find the triple that played in the most number of movies. The figure \ref{threads} models the aggregation done by process 0 of the work produced by processes from 1 to n.
 
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{resources/threads.png}
 \caption{Threads Work Aggregation}
-\label{example}
+\label{threads}
 \end{figure}
 
-The figure above models the aggregation done by process 0 of the work produced by processes from 1 to n.
+We can run parallel computations on the same machine or on the separate machines. When we want to run it on the same machine, we have to consider amount of RAM the machine has and amount of parallel processes we can run on it.
 
 \subsection{Analysis}
 By not choosing to implement a traditional triangles counting, we avoided to examine three times the same triple of the actors and the number of their common movies they played in. To be able to avoid this, we constructed a special data structure and by consolidating edges, we saved used space to save the data.
@@ -125,4 +127,20 @@ In the worst case scenario, when each actor played together with another one (it
 \\
 Complexity of the algorithm highly depends on degree of vertices. The higher it is, the longer computation time is needed. It is related to the process of looking for subsets of size two for each vertex. The complexity of the algorithm is \(\sum\limits_{i=1}^n{k_i \choose 2}\) where \(k_i\) is size of A(\(v_i)\), v \(\in\) V, which we can reduce to \(\sum\limits_{i=1}^n{k_i^2}\).
 \\
-Comparison with Misra-Gries...
+Comparing our approach to Misra-Gries algorithm presented in chapter /ref{Standard}, we can see that the complexity of our algorithm is lower. We present differences in computation time in table \ref{comparison}. The values are counted for the worst case scenario, meaning the worst value we found in dataset. Let a be a constant and equals to 1274, that denotes the highest amount of actors played in a movie. Let k be a constant and equals to 15845. It is the highest number of adjacent vertices a vertex had found in database. Number of movies in IMDB equals to 388126 and number of actors equals to 817718. 
+\begin{table}[ht]
+\caption{Comparison of running times of Misra-Gries algorithm and our approach for the worst case scenario}
+\centering
+\begin{tabular}{c c c}
+\hline\hline
+Method & Running Time & Value \\ [0.5ex]
+\hline
+Misra-Gries&\(\sum\limits_{i=1}^m{a_i^3}*h\)&\(8.03*c^{14} * h\)\\
+Our approach&\(\sum\limits_{i=1}^n{k_i^2}\)&\(2.05*e^{14}\)\\
+\hline
+\end{tabular}
+\label{comparison}
+\end{table}
+The values obtained show that our approach has smaller time complexity than Misra-Gries. For the worst case scenario it is 4*h times.
+\\
+For the parallel approach, the computation time is \(\sum\limits_{i=1}^n{k_i^2}/x\) where x is number of threads. We ignore the time needed for aggregation after computing all the threads, since it is relatively small number.
