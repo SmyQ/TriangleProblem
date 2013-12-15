@@ -1,10 +1,10 @@
-\label{Standard}
 \section{Standard approach}
+\label{Standard}
 
 Firstly we started with implementing a data streaming technique. Since our goal is to find heavy hitters, we chose Misra-Gries algorithm to save space and to process fast large amount of data.
 
-\label{MisraGries}
 \subsection{Pseudocode}
+\label{MisraGries}
 The idea of our version of Misra-Gries is to process data movie by movie. Each movie has a list of actors and while processing them we generate all triplets for each movie. Then we maintain a hash table which contains pairs of triplets and their respective count indicating relative number of occurences of the triplet. We add a triplet to the table if it does not appear there yet or we increment count of analyzed triplet. The result of the analysis is the triplet with the highest count. For more details we present pseudocode of the algorithm in paragraph below.
 \\
 Let m denote number of movies and A(i) denotes list of actors playing in a given movie i. 
@@ -39,6 +39,6 @@ The algorithm allows to save memory since we do not store all the processed data
 \\
 We chose size of the hash table by making computations and running experiments. We estimated that with IMDB database we have nearly 2 billion triplets for all the movies. We ran multiple expreiments with different chache sizes, and the number we found most acceptable in terms of running times was 20 000. This represents 0.001\% of the whole set. While the sample is relatively small, the running time with any bigger chache size would have been unacceptable. More on the running times in section \ref{Experiments}
 \\
-\label{AnalysisMisraGries}
 \subsection{Analysis}
+\label{AnalysisMisraGries}
 Memory usage in Misra-Gries algorithm is very little, the space is needed only for the hash table. Complexity of the algorithm highly depends on the size of cache and the dataset to be processed. The bigger they are, the longer computation time is needed. The complexity of the algorithm is \(\sum\limits_{i=1}^m{a_i \choose 3}*k\) where k is size cache size. We can reduce it to \(\sum\limits_{i=1}^m{a_i^3}*k\).
