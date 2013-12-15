@@ -38,7 +38,7 @@ After the structure is constructed, the actual data processing takes place.
 \subsection{Pseudocode}
 Main algorithm we implemented is FindThreeActors. After constructing the graph, we iterate over all vertices (actors). For each vertex we generate all subsets of size two of the its adjacent edges. We take an advantage of the fact that if an actor 1 played together in the same movie "A" with an actor 2 and the actor 1 played together with an actor 3 in the movie "A", that means that the actor 2 and the actor 3 had to play together in the movie "A". This allows us not to look for triangles in traditional way. Instead, we look for pairs of edges, adjacent to a vertex, that have common movies.
 \\
-We examine each pair of edges and we find the number of common movies that actors played together in. This is the intersection of the two subsets. Another optimisation can be applied here. The intersections, whose size is less than the max size found so far, can be ignored.
+We examine each pair of edges and we find the number of common movies that actors played together in. This is the intersection of the two subsets. Another optimization can be applied here. The intersections, whose size is less than the maximum size found so far, can be ignored.
 \\
 The operations described so far are summarized in the pseudocode below:
 
@@ -93,7 +93,7 @@ Algorithm 3: CommonMovieSubsetCount(movies1, movies2)
 \label{Parallelism}
 Because of the fact the data set is huge, building graph for such an amount of data requires lots of memory. This introduced the need to split the data and make computations on separate parts in parallel. We took care of not losing any data and not processing any records multiple times.
 \\
-Each separate group contains specific number of actors and outgoing edges. The division is done by creating a list of edges (an edge contains 2 actors and a movie these 2 actors played together), where there is no repetition of edges - an edge is always directed from an actor with higher Id to an actor with lower Id. We sorted the list by the Id of the first actor (in this actor with lower Id in an edge). We noticed that since an edge is incoming to the actor with higher Id, vertices with lower Ids have much more outgoing than incoming edges. So in order to have an even separation of computation, we couldn't just pick a contigious collection of vertices for a specific group.
+Each separate group contains specific number of actors and outgoing edges. The division is done by creating a list of edges (an edge contains 2 actors and a movie these 2 actors played together), where there is no repetition of edges - an edge is always directed from an actor with lower Id to an actor with higher Id. We sorted the list by the Id of the first actor (in this actor with lower Id in an edge). We noticed that since an edge is incoming to the actor with higher Id, vertices with lower Ids have much more outgoing than incoming edges. So in order to have an even separation of computation, we couldn't just pick a contigious collection of vertices for a specific group.
 \\
 For instance if we want to have ten groups, to split data evenly in each group, we just picked every tenth vertex (actor) from the sorted list we have. That guaranties that workload on every part of data is similar, since each vertex has less and less outgoing edges.
 \\
