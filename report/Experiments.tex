@@ -3,13 +3,20 @@
 
 
 Some experiments were conducted to verify the correctness of the algorithm and its running time. The results were compared with the "naive" approach - a brute force algorithm that checks any possible combinations. 
- TO BE CONTINUED...
-%%%As expected, this naive algorithm runs considerably slower. The experiments results can be seen in the %%%table below.
 
-%%%\begin{tabular}{l*{6}{c}r}
-%%%               & X Actors, Y Movies & XX Actors, YY Movies & XXX Actors, YYY Movies \\
-%%%\hline
-%%%Naive Approach & X Seconds & XX seconds & XXX seconds\\
-%%%Our Approach   & Y Seconds & YY seconds & YYY seconds\\
-%%%\end{tabular}
-%%%The running times of our approach match the predictions made in previous section.
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+IMDB IS          & Roles size & Bulding DS  & Algorithm RT & Result                     & RM  \\ \hline
+100\%            &            & 0 h         & 38.6 h       & \{760909, 406612, 80307\}  & 15  \\ \hline
+100\%            & 48 967 421 & 393.409 sec & 8.282 sec    & \{150878, 215408, 215564\} & 130 \\ \hline
+50\% (seg-0\_2)  & 24 434 967 & 200.750 sec & 4.795 sec    & \{150878, 215408, 215564\} & 130 \\ \hline
+50\% (seg-1\_2)  & 24 532 454 & 196.157 sec & 3.356 sec    & \{157955, 651761, 329494\} & 101 \\ \hline
+25\% (seg-0\_4)  & 12 339 915 & 98.711 sec  & 2.142 sec    & \{33500, 316918, 761020\}  & 84  \\ \hline
+25\% (seg-1\_4)  & 12 273 033 & 98.430 sec  & 2.095 sec    & \{41669, 341023, 338852\}  & 94  \\ \hline
+25\% (seg-2\_4)  & 12 101 052 & 95.708 sec  & 2.150 sec    & \{150878, 215408, 215564\} & 130 \\ \hline
+25\% (seg-3\_4)  & 12 259 421 & 97.868 sec  & 2.061 sec    & \{157955, 651761, 329494\} & 101 \\ \hline
+10\% (seg-0\_10) & 4 899 811  & 39.729 sec  & 1.225 sec    & \{33500, 316918, 761020\}  & 84  \\ \hline
+1\% (seg-0\_100) & 489 009    & 4.242 sec   & 0.183 sec    & \{33500, 316918, 761020\}  & 84  \\ \hline
+\end{tabular}
+\end{table}
